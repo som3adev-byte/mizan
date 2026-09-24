@@ -1,6 +1,7 @@
 "use client";
 
 import type { InputHTMLAttributes, ReactNode } from "react";
+import { Spinner } from "@/components/ui/Spinner";
 
 type FieldProps = InputHTMLAttributes<HTMLInputElement> & { label: string; id: string };
 
@@ -35,8 +36,9 @@ export function SubmitButton({ busy, children, busyLabel }: { busy: boolean; chi
     <button
       type="submit"
       disabled={busy}
-      className="h-11 w-full rounded-control bg-ink text-body-sm font-semibold text-on-ink transition-colors hover:bg-ink-2 disabled:cursor-wait disabled:opacity-70"
+      className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-control bg-ink text-body-sm font-semibold text-on-ink transition-colors hover:bg-ink-2 disabled:cursor-wait disabled:opacity-70"
     >
+      {busy && <Spinner className="size-4" />}
       {busy ? busyLabel : children}
     </button>
   );

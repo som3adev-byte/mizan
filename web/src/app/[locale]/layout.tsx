@@ -5,7 +5,9 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { directionOf, routing } from "@/i18n/routing";
 import { cookies } from "next/headers";
+import { Suspense } from "react";
 import { THEME_COOKIE, isTheme } from "@/lib/theme";
+import { NavigationProgress } from "@/components/shell/NavigationProgress";
 import "../globals.css";
 
 const plexArabic = IBM_Plex_Sans_Arabic({
@@ -48,6 +50,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
       data-theme={isTheme(saved) ? saved : undefined}
     >
       <body className="min-h-dvh">
+        <Suspense fallback={null}>
+          <NavigationProgress />
+        </Suspense>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>

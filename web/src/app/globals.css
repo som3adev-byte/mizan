@@ -279,3 +279,17 @@
     color: var(--color-paper);
   }
 }
+
+/*
+  Motion for activity indicators. The global reduced-motion rule above stops
+  both, leaving the spinner ring static and the progress bar a steady full-width
+  strip — either way it still reads as "working".
+*/
+@keyframes mizan-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes mizan-progress {
+  0%   { transform: translateX(-100%) scaleX(0.35); }
+  55%  { transform: translateX(15%)   scaleX(0.55); }
+  100% { transform: translateX(120%)  scaleX(0.35); }
+}

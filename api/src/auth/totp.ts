@@ -60,13 +60,14 @@ export function totpAt(secretBase32: string, step: number): string {
 export const currentStep = (nowMs = Date.now()) => Math.floor(nowMs / 1000 / STEP_SECONDS);
 
 /**
- * Returns the matching time step, or null. Accepts one step of clock drift in
- * either direction. Callers must reject a step that was already used.
+ * Returns the matching time step, or null. Accepts two steps of clock drift in
+ * either direction (±60s), so a slightly wrong device clock still verifies.
+ * Callers must reject a step that was already used.
  */
 export function verifyTotp(code: string, secretBase32: string, nowMs = Date.now()): number | null {
   if (!/^\d{6}$/.test(code)) return null;
   const now = currentStep(nowMs);
-  for (const step of [now - 1, now, now + 1]) {
+  for (const step of [now - 2, now - 1, now, now + 1, now + 2]) {
     const expected = Buffer.from(totpAt(secretBase32, step));
     if (timingSafeEqual(expected, Buffer.from(code))) return step;
   }

@@ -20,12 +20,14 @@ describe('totp', () => {
     expect(base32Decode(base32Encode(bytes)).equals(bytes)).toBe(true);
   });
 
-  it('accepts one step of drift and returns the matched step', () => {
+  it('accepts up to two steps of drift and returns the matched step', () => {
     const now = 1_700_000_000_000;
     const step = Math.floor(now / 1000 / 30);
+    expect(verifyTotp(totpAt(RFC_SECRET, step - 2), RFC_SECRET, now)).toBe(step - 2);
     expect(verifyTotp(totpAt(RFC_SECRET, step - 1), RFC_SECRET, now)).toBe(step - 1);
     expect(verifyTotp(totpAt(RFC_SECRET, step + 1), RFC_SECRET, now)).toBe(step + 1);
-    expect(verifyTotp(totpAt(RFC_SECRET, step + 2), RFC_SECRET, now)).toBeNull();
+    expect(verifyTotp(totpAt(RFC_SECRET, step + 2), RFC_SECRET, now)).toBe(step + 2);
+    expect(verifyTotp(totpAt(RFC_SECRET, step + 3), RFC_SECRET, now)).toBeNull();
   });
 
   it('rejects malformed codes', () => {

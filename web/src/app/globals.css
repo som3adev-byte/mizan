@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+/* `dark:` matches an explicit dark choice, or the device's dark setting when nothing is chosen. */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme]), :root:not([data-theme]) *) {
+      @slot;
+    }
+  }
+}
+
+/*
+  Design tokens (the single source of truth for colour, type, spacing and radii).
+  Tailwind's default palette, radii and font sizes are cleared, so only
+  these tokens can be used in class names (bg-ink, rounded-panel, text-body…).
+*/
+@theme {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --color-ink: #14213D;
+  --color-ink-2: #1E2D52;
+  --color-ink-3: #2A3B63;
+  --color-nav-text: #C9D1E0;
+  --color-nav-muted: #8C98B0;
+  --color-nav-ring: rgba(255, 255, 255, .08);
+  --color-nav-edge: rgba(255, 255, 255, .06);
+  --color-amber-on-ink: #F2B45A;
+  --color-paper: #F5F7FA;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F7F8FA;
+  --color-line: #E4E8EE;
+  --color-line-2: #D5DAE1;
+  --color-text: #14213D;
+  --color-muted: #5B6576;
+  --color-faint: #8A93A3;
+  --color-focus: #2F5BD3;
+  --color-on-ink: #FFFFFF;
+  --color-saffron: #B8862B;
+  --color-saffron-bg: #F6EEDD;
+  --color-saffron-text: #7A5A1C;
+
+  /* Roles split out of Ink so the dark theme can remap them separately. */
+  --color-rail: #14213D;
+  --color-rail-2: #1E2D52;
+  --color-rail-3: #2A3B63;
+  --color-on-rail: #FFFFFF;
+  --color-scrim: rgba(20, 33, 61, .28);
+  --color-danger-fill: #C2372E;
+  --color-on-partial: #14213D;
+  --color-status-compliant-tile: #1F8A5B;
+
+  --color-status-compliant: #1F8A5B;
+  --color-status-compliant-bg: #E7F4EE;
+  --color-status-compliant-bar: #1F9A63;
+  --color-status-compliant-text: #176B47;
+  --color-status-partial: #C77A12;
+  --color-status-partial-bg: #FCF1E1;
+  --color-status-partial-bar: #EFA53A;
+  --color-status-partial-text: #8A5208;
+  --color-status-noncompliant: #C2372E;
+  --color-status-noncompliant-bg: #FBE9E7;
+  --color-status-noncompliant-bar: #E0524A;
+  --color-status-noncompliant-line: #F3C9C5;
+  --color-status-na: #7B8390;
+  --color-status-na-bg: #F0F2F5;
+  --color-status-notstarted: #7B8390;
+  --color-status-notstarted-bg: #F4F5F7;
+
+  --radius-*: initial;
+  --radius-badge: 4px;
+  --radius-control: 6px;
+  --radius-panel: 10px;
+  --radius-pill: 999px;
+
+  /* Closed type ramp: 12 / 13 / 14 / 15 / 17 / 24 / 28 / 64 / 76 */
+  --text-*: initial;
+  --text-badge: 12px;
+  --text-label: 13px;
+  --text-body-sm: 14px;
+  --text-body: 15px;
+  --text-headline: 17px;
+  --text-page-title: 24px;
+  --text-stat: 28px;
+  --text-display-mobile: 64px;
+  --text-display: 76px;
+
+  --font-sans: var(--font-plex-arabic), var(--font-plex-latin), system-ui, sans-serif;
+  --font-latin: var(--font-plex-latin), var(--font-plex-arabic), sans-serif;
+
+  --breakpoint-*: initial;
+  --breakpoint-md: 900px;
+  --breakpoint-lg: 1280px;
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    font-size: var(--text-body);
+    line-height: 1.7;
+    letter-spacing: 0;
+  }
+
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-on-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-badge);
+  }
+
+  /* No lone word on the last line of a paragraph; headings balanced across lines. */
+  p, li, dd, figcaption {
+    text-wrap: pretty;
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+
+  /* Numbers and control codes: Latin digits, tabular, isolated from RTL text. */
+  .num {
+    font-family: var(--font-latin);
+    font-variant-numeric: tabular-nums;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+
+  [dir="rtl"] .flip-rtl {
+    transform: scaleX(-1);
+  }
+
+  /* Printed reports (the Reports page): A4 with real margins. */
+  @page {
+    size: A4;
+    margin: 16mm 14mm;
+  }
+
+  @media print {
+    html,
+    body {
+      background: var(--color-surface);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}
+
+/*
+  Dark theme: calm graphite ink, not an inversion.
+  Screen only, so printed reports always use the light tokens.
+  Every text pair is WCAG AA; status tiles were checked with the dataviz validator.
+*/
+/* An explicit choice (the mizan-theme cookie, rendered on <html> by the server)... */
+@media screen {
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --color-ink: #3F506E;
+    --color-ink-2: #4B5E80;
+    --color-ink-3: #56698C;
+    --color-on-ink: #F2F4F7;
+    --color-nav-edge: #1E2229;
+
+    --color-paper: #101318;
+    --color-surface: #181C22;
+    --color-surface-2: #1F232A;
+    --color-line: #2C3038;
+    --color-line-2: #3B4048;
+    --color-text: #E5E8ED;
+    --color-muted: #A6ABB4;
+    --color-faint: #767B83;
+    --color-focus: #7FA4EA;
+    --color-saffron: #C9A567;
+    --color-saffron-bg: #352917;
+    --color-saffron-text: #E5C68E;
+
+    --color-rail: #090C11;
+    --color-rail-2: #15181E;
+    --color-rail-3: #212730;
+    --color-scrim: rgba(0, 0, 0, .55);
+    --color-danger-fill: #B7372E;
+
+    --color-status-compliant: #82BA99;
+    --color-status-compliant-bg: #1A2B21;
+    --color-status-compliant-bar: #2F8856;
+    --color-status-compliant-text: #98CCAD;
+    --color-status-compliant-tile: #2F8856;
+    --color-status-partial: #D7B174;
+    --color-status-partial-bg: #312718;
+    --color-status-partial-bar: #BA8C3E;
+    --color-status-partial-text: #E5C287;
+    --color-status-noncompliant: #DA8378;
+    --color-status-noncompliant-bg: #38221F;
+    --color-status-noncompliant-bar: #9C443C;
+    --color-status-noncompliant-line: #643B35;
+    --color-status-na: #8E929A;
+    --color-status-na-bg: #26292F;
+    --color-status-notstarted: #8E929A;
+    --color-status-notstarted-bg: #21242A;
+  }
+
+  :root[data-theme="dark"] ::selection {
+    background: var(--color-focus);
+    color: var(--color-paper);
+  }
+}
+
+/* ...or, with no choice saved, the device setting. Same values as above. */
+@media screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+
+    --color-ink: #3F506E;
+    --color-ink-2: #4B5E80;
+    --color-ink-3: #56698C;
+    --color-on-ink: #F2F4F7;
+    --color-nav-edge: #1E2229;
+
+    --color-paper: #101318;
+    --color-surface: #181C22;
+    --color-surface-2: #1F232A;
+    --color-line: #2C3038;
+    --color-line-2: #3B4048;
+    --color-text: #E5E8ED;
+    --color-muted: #A6ABB4;
+    --color-faint: #767B83;
+    --color-focus: #7FA4EA;
+    --color-saffron: #C9A567;
+    --color-saffron-bg: #352917;
+    --color-saffron-text: #E5C68E;
+
+    --color-rail: #090C11;
+    --color-rail-2: #15181E;
+    --color-rail-3: #212730;
+    --color-scrim: rgba(0, 0, 0, .55);
+    --color-danger-fill: #B7372E;
+
+    --color-status-compliant: #82BA99;
+    --color-status-compliant-bg: #1A2B21;
+    --color-status-compliant-bar: #2F8856;
+    --color-status-compliant-text: #98CCAD;
+    --color-status-compliant-tile: #2F8856;
+    --color-status-partial: #D7B174;
+    --color-status-partial-bg: #312718;
+    --color-status-partial-bar: #BA8C3E;
+    --color-status-partial-text: #E5C287;
+    --color-status-noncompliant: #DA8378;
+    --color-status-noncompliant-bg: #38221F;
+    --color-status-noncompliant-bar: #9C443C;
+    --color-status-noncompliant-line: #643B35;
+    --color-status-na: #8E929A;
+    --color-status-na-bg: #26292F;
+    --color-status-notstarted: #8E929A;
+    --color-status-notstarted-bg: #21242A;
+  }
+
+  :root:not([data-theme]) ::selection {
+    background: var(--color-focus);
+    color: var(--color-paper);
+  }
+}

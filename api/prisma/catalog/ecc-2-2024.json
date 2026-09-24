@@ -1,0 +1,1665 @@
+{
+  "framework": "ECC-2:2024",
+  "source": {
+    "title": "الضوابط الأساسية للأمن السيبراني (ECC-2:2024)",
+    "publisher": "الهيئة الوطنية للأمن السيبراني",
+    "url": "https://cdn.nca.gov.sa/api/files/public/upload/29a9e86a-595f-4af9-8db5-88715a458a14_ECC-2-2024---NCA.pdf",
+    "sha256": "66165b9ec3347efced2270540e0fd00a4246107a7b3aba6a5482c7db24671230",
+    "note": "Arabic transcribed verbatim from the official Arabic PDF (pages 12-23), with Arabic-Indic digits written as Latin digits per project rules. English taken from the official English PDF's text layer (sourceEn); subcontrol numbers there use dots (1.5.3.1) and are stored as dashes."
+  },
+  "domains": [
+    {
+      "code": "1",
+      "nameAr": "حوكمة الأمن السيبراني",
+      "nameEn": "Cybersecurity Governance"
+    },
+    {
+      "code": "2",
+      "nameAr": "تعزيز الأمن السيبراني",
+      "nameEn": "Cybersecurity Defense"
+    },
+    {
+      "code": "3",
+      "nameAr": "صمود الأمن السيبراني",
+      "nameEn": "Cybersecurity Resilience"
+    },
+    {
+      "code": "4",
+      "nameAr": "الأمن السيبراني المتعلق بالأطراف الخارجية والحوسبة السحابية",
+      "nameEn": "Third-Party and Cloud Computing Cybersecurity"
+    }
+  ],
+  "subdomains": [
+    {
+      "code": "1-1",
+      "domain": "1",
+      "nameAr": "إستراتيجية الأمن السيبراني",
+      "nameEn": "Cybersecurity Strategy",
+      "objectiveAr": "ضمان إسهام خطط العمل للأمن السيبراني والأهداف والمبادرات والمشاريع داخل الجهة في تحقيق المتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure that the action plans, objectives, initiatives, and projects of the entity contribute to compliance with the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "1-2",
+      "domain": "1",
+      "nameAr": "إدارة الأمن السيبراني",
+      "nameEn": "Cybersecurity Management",
+      "objectiveAr": "ضمان التزام ودعم صاحب الصلاحية للجهة فيما يتعلق بإدارة وتطبيق برامج الأمن السيبراني في تلك الجهة وفقاً للمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure that the Authorized Official of the entity complies with and supports the implementation and management of cybersecurity programs within the entity, as per the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "1-3",
+      "domain": "1",
+      "nameAr": "سياسات وإجراءات الأمن السيبراني",
+      "nameEn": "Cybersecurity Policies and Procedures",
+      "objectiveAr": "ضمان توثيق ونشر متطلبات الأمن السيبراني والتزام الجهة بها، وذلك وفقاً لمتطلبات الأعمال التنظيمية للجهة، والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure that the cybersecurity requirements and the entity’s compliance therewith are documented and communicated, as per the entity’s regulatory requirements and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "1-4",
+      "domain": "1",
+      "nameAr": "أدوار ومسؤوليات الأمن السيبراني",
+      "nameEn": "Cybersecurity Roles and Responsibilities",
+      "objectiveAr": "ضمان تحديد أدوار ومسؤوليات واضحة لجميع الأطراف المشاركة في تطبيق ضوابط الأمن السيبراني في الجهة.",
+      "objectiveEn": "To ensure that roles and responsibilities are clearly defined for all parties participating in implementing the cybersecurity controls within the entity."
+    },
+    {
+      "code": "1-5",
+      "domain": "1",
+      "nameAr": "إدارة مخاطر الأمن السيبراني",
+      "nameEn": "Cybersecurity Risk Management",
+      "objectiveAr": "ضمان إدارة مخاطر الأمن السيبراني على نحو ممنهج يهدف إلى حماية الأصول المعلوماتية والتقنية للجهة، وذلك وفقاً للسياسات والإجراءات التنظيمية للجهة والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure managing cybersecurity risks in a methodological approach, in order to protect the entity’s information and technology assets, as per the entity’s regulatory policies and procedures and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "1-6",
+      "domain": "1",
+      "nameAr": "الأمن السيبراني ضمن إدارة المشاريع المعلوماتية والتقنية",
+      "nameEn": "Cybersecurity in Information Technology Projects",
+      "objectiveAr": "التأكد من أن متطلبات الأمن السيبراني مضمنة في منهجية وإجراءات إدارة مشاريع الجهة لحماية السرية وسلامة الأصول المعلوماتية والتقنية للجهة ودقتها وتوافرها، وذلك وفقاً للسياسات والإجراءات التنظيمية للجهة والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure that cybersecurity requirements are included in the methodology and procedures of the entity’s project management, in order to protect the confidentiality, integrity, accuracy, and availability of the entity’s information and technology assets, as per the entity’s regulatory policies and procedures and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "1-7",
+      "domain": "1",
+      "nameAr": "الالتزام بتشريعات وتنظيمات ومعايير الأمن السيبراني",
+      "nameEn": "Cybersecurity Regulatory Compliance",
+      "objectiveAr": "ضمان التأكد من أن برنامج الأمن السيبراني لدى الجهة يتوافق مع المتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure that the entity’s cybersecurity program complies with the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "1-8",
+      "domain": "1",
+      "nameAr": "المراجعة والتدقيق الدوري للأمن السيبراني",
+      "nameEn": "Cybersecurity Periodical Assessment and Audit",
+      "objectiveAr": "ضمان التأكد من أن ضوابط الأمن السيبراني لدى الجهة مطبقة وتعمل وفقاً للسياسات والإجراءات التنظيمية للجهة، والمتطلبات التشريعية والتنظيمية الوطنية ذات العلاقة، والمتطلبات الدولية المقرّة تنظيمياً على الجهة.",
+      "objectiveEn": "To ensure that the cybersecurity controls adopted by the entity are implemented and applicable in accordance with the entity’s regulatory policies and procedures, relevant national legislative and regulatory requirements, and international requirements imposed on the entity by law."
+    },
+    {
+      "code": "1-9",
+      "domain": "1",
+      "nameAr": "الأمن السيبراني المتعلق بالموارد البشرية",
+      "nameEn": "Cybersecurity in Human Resources",
+      "objectiveAr": "ضمان التأكد من أن مخاطر ومتطلبات الأمن السيبراني المتعلقة بالعاملين (موظفين ومتعاقدين) في الجهة تعالج بفعالية قبل وأثناء وعند انتهاء/إنهاء عملهم، وذلك وفقاً للسياسات والإجراءات التنظيمية للجهة، والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure that cybersecurity risks and requirements for personnel (employees and contractors) of the entity are managed efficiently prior to, during, and upon the end or termination of their employment, as per the entity’s regulatory policies and procedures and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "1-10",
+      "domain": "1",
+      "nameAr": "برنامج التوعية والتدريب بالأمن السيبراني",
+      "nameEn": "Cybersecurity Awareness and Training Program",
+      "objectiveAr": "ضمان التأكد من أن العاملين بالجهة لديهم التوعية الأمنية اللازمة وعلى دراية بمسؤولياتهم في مجال الأمن السيبراني. والتأكد من تزويد العاملين بالجهة بالمهارات والمؤهلات والدورات التدريبية المطلوبة في مجال الأمن السيبراني لحماية الأصول المعلوماتية والتقنية للجهة والقيام بمسؤولياتهم تجاه الأمن السيبراني.",
+      "objectiveEn": "To ensure that the entity’s personnel have the required security awareness, are aware of their cybersecurity responsibilities, and are equipped with the required cybersecurity skills, qualifications, and training courses in order to protect the entity’s information and technology assets and fulfill their cybersecurity duties."
+    },
+    {
+      "code": "2-1",
+      "domain": "2",
+      "nameAr": "إدارة الأصول",
+      "nameEn": "Asset Management",
+      "objectiveAr": "للتأكد من أن الجهة لديها قائمة جرد دقيقة وحديثة للأصول تشمل التفاصيل ذات العلاقة لجميع الأصول المعلوماتية والتقنية المتاحة للجهة، من أجل دعم العمليات التشغيلية للجهة ومتطلبات الأمن السيبراني، لتحقيق سرية وسلامة الأصول المعلوماتية والتقنية للجهة ودقتها وتوافرها.",
+      "objectiveEn": "To ensure that the entity has an accurate and updated inventory of assets, including details of all information and technology assets of the entity, in order to support the entity’s operations and cybersecurity requirements to maintain the confidentiality, integrity, accuracy, and availability of information and technology assets of the entity."
+    },
+    {
+      "code": "2-2",
+      "domain": "2",
+      "nameAr": "إدارة هويات الدخول والصلاحيات",
+      "nameEn": "Identity and Access Management",
+      "objectiveAr": "ضمان حماية الأمن السيبراني للوصول المنطقي (Logical Access) إلى الأصول المعلوماتية والتقنية للجهة من أجل منع الوصول غير المصرح به وتقييد الوصول إلى ما هو مطلوب لإنجاز الأعمال المتعلقة بالجهة.",
+      "objectiveEn": "To ensure protecting cybersecurity of logical access to information and technology assets of the entity, in order to prevent unauthorized access and restrict access to the extent necessary for accomplishment of the assigned tasks of the entity."
+    },
+    {
+      "code": "2-3",
+      "domain": "2",
+      "nameAr": "حماية الأنظمة وأجهزة معالجة المعلومات",
+      "nameEn": "Information System and Processing Facilities Protection",
+      "objectiveAr": "ضمان حماية الأنظمة وأجهزة معالجة المعلومات بما في ذلك أجهزة المستخدمين والبنى التحتية للجهة من المخاطر السيبرانية.",
+      "objectiveEn": "To ensure the protection of information systems and processing facilities, including workstations and infrastructures of the entity, against cyber risks."
+    },
+    {
+      "code": "2-4",
+      "domain": "2",
+      "nameAr": "حماية البريد الإلكتروني",
+      "nameEn": "Email Protection",
+      "objectiveAr": "ضمان حماية البريد الإلكتروني للجهة من المخاطر السيبرانية.",
+      "objectiveEn": "To ensure the protection of the entity’s email service against cyber risks."
+    },
+    {
+      "code": "2-5",
+      "domain": "2",
+      "nameAr": "إدارة أمن الشبكات",
+      "nameEn": "Networks Security Management",
+      "objectiveAr": "ضمان حماية شبكات الجهة من المخاطر السيبرانية.",
+      "objectiveEn": "To ensure the protection of entity’s networks against cyber risks."
+    },
+    {
+      "code": "2-6",
+      "domain": "2",
+      "nameAr": "أمن الأجهزة المحمولة",
+      "nameEn": "Mobile Devices Security",
+      "objectiveAr": "ضمان حماية أجهزة الجهة المحمولة (بما في ذلك أجهزة الحاسب المحمول والهواتف الذكية والأجهزة الذكية اللوحية) من المخاطر السيبرانية. وضمان التعامل بشكل آمن مع المعلومات الحساسة والمعلومات الخاصة بأعمال الجهة وحمايتها أثناء النقل والتخزين عند استخدام الأجهزة الشخصية للعاملين في الجهة (مبدأ \"BYOD\").",
+      "objectiveEn": "To ensure the protection of the entity’s mobile devices (including laptops, smartphones, and tablets) against cyber risks, and ensure secure handling of the entity’s sensitive information and business information and protecting them during transfer and storage while using the devices of personnel of the entity (Bring Your Own Device \"BYOD” policy)."
+    },
+    {
+      "code": "2-7",
+      "domain": "2",
+      "nameAr": "حماية البيانات والمعلومات",
+      "nameEn": "Data and Information Protection",
+      "objectiveAr": "ضمان حماية السرية وسلامة بيانات ومعلومات الجهة ودقتها وتوافرها، وذلك وفقاً للسياسات والإجراءات التنظيمية للجهة، والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure confidentiality, integrity, accuracy, and availability of the entity’s data and information, as per the entity’s regulatory policies and procedures and the relevant legislative and regulatory requirements"
+    },
+    {
+      "code": "2-8",
+      "domain": "2",
+      "nameAr": "التشفير",
+      "nameEn": "Cryptography",
+      "objectiveAr": "ضمان الاستخدام السليم والفعال للتشفير لحماية الأصول المعلوماتية الإلكترونية للجهة، وذلك وفقاً للمعايير الوطنية للتشفير الصادرة من الهيئة، وللسياسات والإجراءات التنظيمية للجهة، وبناء على تقييم المخاطر، وبحسب المتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure the proper and efficient use of cryptography to protect electronic information assets of the entity, as per the entity’s regulatory policies and procedures and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "2-9",
+      "domain": "2",
+      "nameAr": "إدارة النسخ الاحتياطية",
+      "nameEn": "Backup and Recovery Management",
+      "objectiveAr": "ضمان حماية بيانات ومعلومات الجهة والإعدادات التقنية للأنظمة والتطبيقات الخاصة بالجهة من الأضرار الناجمة عن المخاطر السيبرانية، وذلك وفقاً للسياسات والإجراءات التنظيمية للجهة، والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure the protection of the entity’s data, information, and technical configurations of systems and applications against cyber risks, as per the entity’s regulatory policies and procedures and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "2-10",
+      "domain": "2",
+      "nameAr": "إدارة الثغرات",
+      "nameEn": "Vulnerabilities Management",
+      "objectiveAr": "ضمان اكتشاف الثغرات التقنية في الوقت المناسب ومعالجتها بشكل فعال، وذلك لمنع أو تقليل احتمالية استغلال هذه الثغرات من قبل الهجمات السيبرانية وتقليل الآثار المترتبة على أعمال الجهة.",
+      "objectiveEn": "To ensure timely detection and effective remediation of technical vulnerabilities to prevent or minimize the probability of exploitation of these vulnerabilities by cyber-attacks and to reduce any impacts on the entity’s business."
+    },
+    {
+      "code": "2-11",
+      "domain": "2",
+      "nameAr": "اختبار الاختراق",
+      "nameEn": "Penetration Testing",
+      "objectiveAr": "تقييم واختبار مدى فعالية قدرات تعزيز الأمن السيبراني في الجهة، وذلك من خلال عمل محاكاة لتقنيات وأساليب الهجوم السيبراني الفعلية. ولاكتشاف نقاط الضعف الأمنية غير المعروفة والتي قد تؤدي إلى الاختراق السيبراني للجهة. وذلك وفقاً للمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To assess and test the efficiency of the entity’s cybersecurity defense capabilities through simulation of actual cyber-attack methods and technologies to discover unknown weaknesses that may lead to cyber penetration of the entity, as per the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "2-12",
+      "domain": "2",
+      "nameAr": "إدارة سجلات الأحداث ومراقبة الأمن السيبراني",
+      "nameEn": "Cybersecurity Event Logs and Monitoring Management",
+      "objectiveAr": "ضمان تجميع وتحليل ومراقبة سجلات أحداث الأمن السيبراني في الوقت المناسب من أجل الاكتشاف الاستباقي للهجمات السيبرانية وإدارة مخاطرها بفعالية لمنع أو تقليل الآثار المترتبة على أعمال الجهة.",
+      "objectiveEn": "To ensure timely collection, analysis, and monitoring of cybersecurity event logs for proactive detection and effective management of cyber-attacks to prevent or minimize negative impacts on the entity’s business."
+    },
+    {
+      "code": "2-13",
+      "domain": "2",
+      "nameAr": "إدارة حوادث وتهديدات الأمن السيبراني",
+      "nameEn": "Cybersecurity Incident and Threat Management",
+      "objectiveAr": "ضمان تحديد واكتشاف حوادث الأمن السيبراني في الوقت المناسب وإدارتها بشكل فعّال والتعامل مع تهديدات الأمن السيبراني استباقياً من أجل منع أو تقليل الآثار المترتبة على أعمال الجهة. مع مراعاة ما ورد في الأمر السامي الكريم رقم 37140 وتاريخ 14 / 8 / 1438 هـ.",
+      "objectiveEn": "To ensure timely identification, detection, and effective management of cybersecurity incidents and proactive response to cybersecurity threats to prevent or minimize impacts on the entity’s business, as per High Order No. 37140, dated 14/08/1438H."
+    },
+    {
+      "code": "2-14",
+      "domain": "2",
+      "nameAr": "الأمن المادي",
+      "nameEn": "Physical Security",
+      "objectiveAr": "ضمان حماية الأصول المعلوماتية والتقنية للجهة من الوصول المادي غير المصرح به والفقدان والسرقة والتخريب.",
+      "objectiveEn": "To ensure the protection of information and technology assets of the entity against unauthorized physical access, loss, theft, and damage."
+    },
+    {
+      "code": "2-15",
+      "domain": "2",
+      "nameAr": "حماية تطبيقات الويب",
+      "nameEn": "Web Application Security",
+      "objectiveAr": "ضمان حماية تطبيقات الويب الخارجية للجهة من المخاطر السيبرانية.",
+      "objectiveEn": "To ensure the protection of external web applications of the entity against cyber risks."
+    },
+    {
+      "code": "3-1",
+      "domain": "3",
+      "nameAr": "جوانب صمود الأمن السيبراني في إدارة استمرارية الأعمال",
+      "nameEn": "Cybersecurity Resilience aspects of Business Continuity Management (BCM)",
+      "objectiveAr": "ضمان توافر متطلبات صمود الأمن السيبراني في إدارة استمرارية أعمال الجهة. وضمان معالجة وتقليل الآثار المترتبة على الاضطرابات في الخدمات الإلكترونية الحرجة للجهة وأنظمة وأجهزة معالجة معلوماتها جراء الكوارث الناتجة عن المخاطر السيبرانية.",
+      "objectiveEn": "To ensure the inclusion of cybersecurity resilience requirements in the entity’s business continuity management and remediate and minimize the impacts of disruptions on the entity’s critical e-services and information processing systems and facilities caused by cyber risks."
+    },
+    {
+      "code": "4-1",
+      "domain": "4",
+      "nameAr": "الأمن السيبراني المتعلق بالأطراف الخارجية",
+      "nameEn": "Third-Party Cybersecurity",
+      "objectiveAr": "ضمان حماية أصول الجهة من مخاطر الأمن السيبراني المتعلقة بالأطراف الخارجية (بما في ذلك خدمات الإسناد للأمن السيبراني أو لتقنية المعلومات \"Outsourcing\" والخدمات المدارة \"Managed Services\"). وفقاً للسياسات والإجراءات التنظيمية للجهة، والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "objectiveEn": "To ensure the protection of the entity’s assets against third-party cybersecurity risks (including Information Technology (IT) outsourcing, cybersecurity outsourcing, and managed services), as per the entity’s regulatory policies and procedures and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "4-2",
+      "domain": "4",
+      "nameAr": "الأمن السيبراني المتعلق بالحوسبة السحابية والاستضافة",
+      "nameEn": "Cloud Computing and Hosting Cybersecurity",
+      "objectiveAr": "ضمان معالجة المخاطر السيبرانية وتنفيذ متطلبات الأمن السيبراني للحوسبة السحابية والاستضافة بشكل ملائم وفعّال، وذلك وفقاً للسياسات والإجراءات التنظيمية للجهة، والمتطلبات التشريعية والتنظيمية والأوامر والقرارات ذات العلاقة. وضمان حماية الأصول المعلوماتية والتقنية للجهة على خدمات الحوسبة السحابية التي تتم استضافتها أو معالجتها أو إدارتها بواسطة أطراف خارجية.",
+      "objectiveEn": "To ensure proper and efficient remediation of cyber risks and implementation of cybersecurity requirements for cloud computing and hosting, as per the entity’s regulatory policies and procedures, relevant legislative and regulatory requirements, orders, and decisions, and to ensure the protection of the entity’s information and technology assets on cloud computing services hosted, processed, or managed by third parties."
+    }
+  ],
+  "controls": [
+    {
+      "code": "1-1-1",
+      "subdomain": "1-1",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد إستراتيجية الأمن السيبراني للجهة ودعمها من قبل رئيس الجهة أو من ينيبه (ويشار له في هذه الضوابط باسم \"صاحب الصلاحية\")، وأن تتماشى الأهداف الإستراتيجية للأمن السيبراني للجهة مع المتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "textEn": "The cybersecurity strategy of the entity shall be identified, documented, and approved, and it shall be supported by the head of the entity or his/her delegate (Hereinafter referred to as the “Authorized Official”). The strategy goals shall be in line with the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "1-1-2",
+      "subdomain": "1-1",
+      "parent": null,
+      "textAr": "يجب العمل على تنفيذ خطة عمل لتطبيق إستراتيجية الأمن السيبراني من قبل الجهة.",
+      "textEn": "The entity shall execute an action plan to apply the cybersecurity strategy."
+    },
+    {
+      "code": "1-1-3",
+      "subdomain": "1-1",
+      "parent": null,
+      "textAr": "يجب مراجعة إستراتيجية الأمن السيبراني على فترات زمنية مخطط لها (أو في حالة حدوث تغييرات في المتطلبات التشريعية والتنظيمية ذات العلاقة).",
+      "textEn": "The cybersecurity strategy shall be reviewed at planned intervals (or in case of changes to the relevant legislative and regulatory requirements)."
+    },
+    {
+      "code": "1-2-1",
+      "subdomain": "1-2",
+      "parent": null,
+      "textAr": "يجب إنشاء إدارة معنية بالأمن السيبراني في الجهة مستقلة عن إدارة تقنية المعلومات والاتصالات (ICT/ IT) (وفقاً للأمر السامي الكريم رقم 37140 وتاريخ 14 / 8 / 1438 هـ). ويفضل ارتباطها مباشرة برئيس الجهة أو من ينيبه، مع الأخذ بالاعتبار عدم تعارض المصالح.",
+      "textEn": "A department for cybersecurity shall be established within the entity. This department shall be independent from the Information Technology and Communications Department (As per High Order No. 37140, dated 14/08/1438H.). It is recommended that the Cybersecurity Department reports directly to the head of the entity or his/her delegate while ensuring that this does not result in a conflict of interests."
+    },
+    {
+      "code": "1-2-2",
+      "subdomain": "1-2",
+      "parent": null,
+      "textAr": "يجب شغل جميع وظائف الأمن السيبراني من قبل مواطنين متفرغين وذوي كفاءة في مجال الأمن السيبراني.",
+      "textEn": "All cybersecurity positions shall be filled out with full-time and qualified Saudi cybersecurity professionals."
+    },
+    {
+      "code": "1-2-3",
+      "subdomain": "1-2",
+      "parent": null,
+      "textAr": "يجب إنشاء لجنة إشرافية للأمن السيبراني بتوجيه من صاحب الصلاحية للجهة لضمان التزام ودعم ومتابعة تطبيق برامج وتشريعات الأمن السيبراني، ويتم تحديد وتوثيق واعتماد أعضاء اللجنة ومسؤولياتها وإطار حوكمة أعمالها على أن يكون رئيس الإدارة المعنية بالأمن السيبراني أحد أعضائها. ويفضل ارتباطها مباشرة برئيس الجهة أو من ينيبه، مع الأخذ بالاعتبار عدم تعارض المصالح.",
+      "textEn": "A cybersecurity supervisory committee shall be established pursuant to the instruction of the entity’s Authorized Official to ensure compliance with, support for, and monitoring of the implementation of the cybersecurity programs and regulations. The committee’s members, responsibilities, and governance framework shall be identified, documented, and approved. The committee shall include the head of the cybersecurity department as a member. It is recommended that the committee reports directly to the head of the entity or his/her delegate while ensuring that this does not result in a conflict of interests."
+    },
+    {
+      "code": "1-3-1",
+      "subdomain": "1-3",
+      "parent": null,
+      "textAr": "يجب على الإدارة المعنية بالأمن السيبراني في الجهة تحديد سياسات وإجراءات الأمن السيبراني وما تشمله من ضوابط ومتطلبات الأمن السيبراني، وتوثيقها واعتمادها من قبل صاحب الصلاحية في الجهة، كما يجب نشرها إلى ذوي العلاقة من العاملين في الجهة والأطراف المعنية بها.",
+      "textEn": "The cybersecurity department of the entity shall identify and document cybersecurity policies and procedures, including the cybersecurity controls and requirements, and have them approved by the entity’s Authorized Official, and communicate them to the relevant personnel and parties inside the entity."
+    },
+    {
+      "code": "1-3-2",
+      "subdomain": "1-3",
+      "parent": null,
+      "textAr": "يجب على الإدارة المعنية بالأمن السيبراني ضمان تطبيق سياسات وإجراءات الأمن السيبراني في الجهة وما تشمله من ضوابط ومتطلبات.",
+      "textEn": "The cybersecurity department shall ensure that the cybersecurity policies and procedures, including the relevant controls and requirements, are implemented at the entity."
+    },
+    {
+      "code": "1-3-3",
+      "subdomain": "1-3",
+      "parent": null,
+      "textAr": "يجب أن تكون سياسات وإجراءات الأمن السيبراني مدعومة بمعايير تقنية أمنية (على سبيل المثال: المعايير التقنية الأمنية لجدار الحماية وقواعد البيانات، وأنظمة التشغيل، إلخ).",
+      "textEn": "The cybersecurity policies and procedures shall be supported by technical security standards (e.g. technical security standards for firewall, databases, operating systems, etc.)."
+    },
+    {
+      "code": "1-3-4",
+      "subdomain": "1-3",
+      "parent": null,
+      "textAr": "يجب مراجعة سياسات وإجراءات ومعايير الأمن السيبراني وتحديثها على فترات زمنية مخطط لها (أو في حالة حدوث تغييرات في المتطلبات التشريعية والتنظيمية والمعايير ذات العلاقة)، كما يجب توثيق التغييرات واعتمادها.",
+      "textEn": "The cybersecurity policies and procedures shall be reviewed and updated at planned intervals (or in case of changes to the relevant legislative and regulatory requirements and standards). Changes shall be documented and approved."
+    },
+    {
+      "code": "1-4-1",
+      "subdomain": "1-4",
+      "parent": null,
+      "textAr": "يجب على صاحب الصلاحية تحديد وتوثيق واعتماد الهيكل التنظيمي للحوكمة والأدوار والمسؤوليات الخاصة بالأمن السيبراني للجهة، وتكليف الأشخاص المعنيين بها، كما يجب تقديم الدعم اللازم لإنفاذ ذلك، مع الأخذ بالاعتبار عدم تعارض المصالح.",
+      "textEn": "The Authorized Official shall identify, document, and approve the governance organizational structure, roles, and responsibilities of the entity’s cybersecurity, and assign the persons concerned therewith. The necessary support shall be provided for the implementation thereof while ensuring that this does not result in a conflict of interests."
+    },
+    {
+      "code": "1-4-2",
+      "subdomain": "1-4",
+      "parent": null,
+      "textAr": "يجب مراجعة أدوار ومسؤوليات الأمن السيبراني في الجهة وتحديثها على فترات زمنية مخطط لها (أو في حالة حدوث تغييرات في المتطلبات التشريعية والتنظيمية ذات العلاقة).",
+      "textEn": "The cybersecurity roles and responsibilities within the entity shall be reviewed and updated at planned intervals (or in case of changes to the relevant legislative and regulatory requirements)."
+    },
+    {
+      "code": "1-5-1",
+      "subdomain": "1-5",
+      "parent": null,
+      "textAr": "يجب على الإدارة المعنية بالأمن السيبراني في الجهة تحديد وتوثيق واعتماد منهجية وإجراءات إدارة مخاطر الأمن السيبراني في الجهة. وذلك وفقاً لاعتبارات السرية وتوافر وسلامة الأصول المعلوماتية والتقنية.",
+      "textEn": "The cybersecurity department of the entity shall identify, document, and approve the cybersecurity risk management methodology and procedures within the entity, in accordance with considerations of confidentiality, and the integrity and availability of information and technology assets."
+    },
+    {
+      "code": "1-5-2",
+      "subdomain": "1-5",
+      "parent": null,
+      "textAr": "يجب على الإدارة المعنية بالأمن السيبراني تطبيق منهجية وإجراءات إدارة مخاطر الأمن السيبراني في الجهة.",
+      "textEn": "The cybersecurity department shall implement the cybersecurity risk management methodology and procedures within the entity."
+    },
+    {
+      "code": "1-5-3",
+      "subdomain": "1-5",
+      "parent": null,
+      "textAr": "يجب تنفيذ إجراءات تقييم مخاطر الأمن السيبراني بحد أدنى في الحالات التالية:",
+      "textEn": "The cybersecurity risk assessment procedures shall be implemented at least in the following cases:"
+    },
+    {
+      "code": "1-5-3-1",
+      "subdomain": "1-5",
+      "parent": "1-5-3",
+      "textAr": "في مرحلة مبكرة من المشاريع التقنية.",
+      "textEn": "At early stage of technology projects."
+    },
+    {
+      "code": "1-5-3-2",
+      "subdomain": "1-5",
+      "parent": "1-5-3",
+      "textAr": "قبل إجراء تغيير جوهري في البنية التقنية.",
+      "textEn": "Before making major changes to technology infrastructure."
+    },
+    {
+      "code": "1-5-3-3",
+      "subdomain": "1-5",
+      "parent": "1-5-3",
+      "textAr": "عند التخطيط للحصول على خدمات طرف خارجي.",
+      "textEn": "During planning to obtain third party services."
+    },
+    {
+      "code": "1-5-3-4",
+      "subdomain": "1-5",
+      "parent": "1-5-3",
+      "textAr": "عند التخطيط وقبل إطلاق منتجات وخدمات تقنية جديدة.",
+      "textEn": "During planning and before the release of new technology services and products."
+    },
+    {
+      "code": "1-5-4",
+      "subdomain": "1-5",
+      "parent": null,
+      "textAr": "يجب مراجعة منهجية وإجراءات إدارة مخاطر الأمن السيبراني وتحديثها على فترات زمنية مخطط لها (أو في حالة حدوث تغييرات في المتطلبات التشريعية والتنظيمية والمعايير ذات العلاقة)، كما يجب توثيق التغييرات واعتمادها.",
+      "textEn": "The cybersecurity risk management methodology and procedures shall be reviewed and updated at planned intervals (or in case of changes to the relevant legislative and regulatory requirements and standards). Changes shall be documented and approved."
+    },
+    {
+      "code": "1-6-1",
+      "subdomain": "1-6",
+      "parent": null,
+      "textAr": "يجب تضمين متطلبات الأمن السيبراني في منهجية وإجراءات إدارة المشاريع وفي إدارة التغيير على الأصول المعلوماتية والتقنية في الجهة لضمان تحديد مخاطر الأمن السيبراني ومعالجتها كجزء من دورة حياة المشروع التقني، وأن تكون متطلبات الأمن السيبراني جزء أساسي من متطلبات المشاريع التقنية.",
+      "textEn": "Cybersecurity requirements shall be included in the project management methodology and procedures and in the information and technology asset change management within the entity to ensure identifying and managing cybersecurity risks as part of the technology project lifecycle. The cybersecurity requirements shall be a key part of the requirements for technology projects."
+    },
+    {
+      "code": "1-6-2",
+      "subdomain": "1-6",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لإدارة المشاريع والتغييرات على الأصول المعلوماتية والتقنية للجهة بحد أدنى ما يلي:",
+      "textEn": "The cybersecurity requirements for project management and information and technology asset changes within the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "1-6-2-1",
+      "subdomain": "1-6",
+      "parent": "1-6-2",
+      "textAr": "تقييم الثغرات ومعالجتها.",
+      "textEn": "Vulnerability assessment and remediation."
+    },
+    {
+      "code": "1-6-2-2",
+      "subdomain": "1-6",
+      "parent": "1-6-2",
+      "textAr": "إجراء مراجعة للإعدادات والتحصين (Secure Configuration and Hardening) وحزم التحديثات قبل إطلاق وتدشين المشاريع والتغييرات.",
+      "textEn": "Reviewing secure configuration and hardening and updates packages before launching projects and changes."
+    },
+    {
+      "code": "1-6-3",
+      "subdomain": "1-6",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لمشاريع تطوير التطبيقات والبرمجيات الخاصة للجهة بحد أدنى ما يلي:",
+      "textEn": "The cybersecurity requirements for software and application development projects within the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "1-6-3-1",
+      "subdomain": "1-6",
+      "parent": "1-6-3",
+      "textAr": "استخدام معايير التطوير الآمن للتطبيقات (Secure Coding Standards).",
+      "textEn": "Using the secure coding standards."
+    },
+    {
+      "code": "1-6-3-2",
+      "subdomain": "1-6",
+      "parent": "1-6-3",
+      "textAr": "استخدام مصادر مرخصة وموثوقة لأدوات تطوير التطبيقات والمكتبات الخاصة بها (Libraries).",
+      "textEn": "Using trusted and licensed sources for software development tools and libraries."
+    },
+    {
+      "code": "1-6-3-3",
+      "subdomain": "1-6",
+      "parent": "1-6-3",
+      "textAr": "إجراء اختبار للتحقق من مدى استيفاء التطبيقات للمتطلبات الأمنية السيبرانية للجهة.",
+      "textEn": "Conducting compliance test for software against the cybersecurity requirements within the entity."
+    },
+    {
+      "code": "1-6-3-4",
+      "subdomain": "1-6",
+      "parent": "1-6-3",
+      "textAr": "أمن التكامل (Integration) بين التطبيقات.",
+      "textEn": "Secure integration between applications."
+    },
+    {
+      "code": "1-6-3-5",
+      "subdomain": "1-6",
+      "parent": "1-6-3",
+      "textAr": "إجراء مراجعة للإعدادات والتحصين (Secure Configuration and Hardening) وحزم التحديثات قبل إطلاق وتدشين التطبيقات.",
+      "textEn": "Reviewing secure configuration and hardening and updates packages before launching software products"
+    },
+    {
+      "code": "1-6-4",
+      "subdomain": "1-6",
+      "parent": null,
+      "textAr": "يجب مراجعة متطلبات الأمن السيبراني في إدارة المشاريع في الجهة دورياً.",
+      "textEn": "The cybersecurity requirements for project management within the entity shall be periodically reviewed."
+    },
+    {
+      "code": "1-7-1",
+      "subdomain": "1-7",
+      "parent": null,
+      "textAr": "في حال وجود اتفاقيات أو التزامات دولية معتمدة محلياً تتضمن متطلبات خاصة بالأمن السيبراني، فيجب على الجهة حصر تلك المتطلبات والالتزام بها.",
+      "textEn": "If there are nationally approved international agreements or commitments that include cybersecurity requirements, the entity shall identify and comply with these requirements."
+    },
+    {
+      "code": "1-8-1",
+      "subdomain": "1-8",
+      "parent": null,
+      "textAr": "يجب على الإدارة المعنية بالأمن السيبراني في الجهة مراجعة تطبيق ضوابط الأمن السيبراني دورياً.",
+      "textEn": "The cybersecurity department of the entity shall periodically review the implementation of cybersecurity controls by the entity."
+    },
+    {
+      "code": "1-8-2",
+      "subdomain": "1-8",
+      "parent": null,
+      "textAr": "يجب مراجعة وتدقيق تطبيق ضوابط الأمن السيبراني في الجهة، من قبل أطراف مستقلة عن الإدارة المعنية بالأمن السيبراني (مثل الإدارة المعنية بالمراجعة في الجهة). على أن تتم المراجعة والتدقيق بشكل مستقل يراعى فيه مبدأ عدم تعارض المصالح، وذلك وفقاً للمعايير العامة المقبولة للمراجعة والتدقيق والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "textEn": "The implementation of cybersecurity controls by the entity shall be reviewed and audited by parties other than the cybersecurity department at the entity, provided that the audit and review are to be conducted independently while considering the principle of conflict of interest, as per the Generally Accepted Auditing Standards (GAAS) and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "1-8-3",
+      "subdomain": "1-8",
+      "parent": null,
+      "textAr": "يجب توثيق نتائج مراجعة وتدقيق الأمن السيبراني، وعرضها على اللجنة الإشرافية للأمن السيبراني وصاحب الصلاحية. كما يجب أن تشتمل النتائج على نطاق المراجعة والتدقيق، والملاحظات المكتشفة، والتوصيات والإجراءات التصحيحية، وخطة معالجة الملاحظات.",
+      "textEn": "The results of cybersecurity audits and reviews shall be documented and presented to the cybersecurity supervisory committee and the Authorized Official. Results shall include the audit and review scope, observations, recommendations, corrective actions, and remediation plans."
+    },
+    {
+      "code": "1-9-1",
+      "subdomain": "1-9",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني المتعلقة بالعاملين قبل توظيفهم وأثناء عملهم وعند انتهاء/إنهاء عملهم في الجهة.",
+      "textEn": "Cybersecurity requirements for personnel of the entity shall be identified, documented, and approved prior to, during, and upon the end or termination of their employment."
+    },
+    {
+      "code": "1-9-2",
+      "subdomain": "1-9",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني المتعلقة بالعاملين في الجهة.",
+      "textEn": "Cybersecurity requirements for personnel of the entity shall be implemented."
+    },
+    {
+      "code": "1-9-3",
+      "subdomain": "1-9",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني قبل بدء علاقة العاملين المهنية بالجهة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements prior to the commencement of the employment relationship between personnel and the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "1-9-3-1",
+      "subdomain": "1-9",
+      "parent": "1-9-3",
+      "textAr": "تضمين مسؤوليات الأمن السيبراني وبنود المحافظة على سرية المعلومات (Non-Disclosure Clauses) في عقود العاملين في الجهة (لتشمل خلال وبعد انتهاء/إنهاء العلاقة الوظيفية مع الجهة).",
+      "textEn": "Incorporating the personnel’s cybersecurity responsibilities clauses and non-disclosure clauses in their employment contracts with the entity (including during and after employment end/termination with the entity)."
+    },
+    {
+      "code": "1-9-3-2",
+      "subdomain": "1-9",
+      "parent": "1-9-3",
+      "textAr": "إجراء المسح الأمني (Screening or Vetting) للعاملين في وظائف الأمن السيبراني والوظائف التقنية ذات الصلاحيات الهامة والحساسة.",
+      "textEn": "Conducting screening or vetting for personnel in cybersecurity positions and technical positions with critical and privileged powers."
+    },
+    {
+      "code": "1-9-4",
+      "subdomain": "1-9",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني خلال علاقة العاملين المهنية بالجهة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for personnel during their employment relationship with the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "1-9-4-1",
+      "subdomain": "1-9",
+      "parent": "1-9-4",
+      "textAr": "التوعية بالأمن السيبراني (عند بداية المهنة الوظيفية وخلالها).",
+      "textEn": "Cybersecurity awareness (during on-boarding and during employment)."
+    },
+    {
+      "code": "1-9-4-2",
+      "subdomain": "1-9",
+      "parent": "1-9-4",
+      "textAr": "تطبيق متطلبات الأمن السيبراني والالتزام بها وفقاً لسياسات وإجراءات وعمليات الأمن السيبراني للجهة.",
+      "textEn": "Implementation and compliance with cybersecurity requirements, as per the entity’s cybersecurity policies, procedures, and operations."
+    },
+    {
+      "code": "1-9-5",
+      "subdomain": "1-9",
+      "parent": null,
+      "textAr": "يجب مراجعة وإلغاء الصلاحيات للعاملين مباشرة بعد انتهاء/إنهاء العلاقة الوظيفية مع الجهة.",
+      "textEn": "The personnel’s powers shall be reviewed and revoked immediately upon the end/termination of their employment with the entity."
+    },
+    {
+      "code": "1-9-6",
+      "subdomain": "1-9",
+      "parent": null,
+      "textAr": "يجب مراجعة متطلبات الأمن السيبراني المتعلقة بالعاملين في الجهة دورياً.",
+      "textEn": "Cybersecurity requirements for personnel of the entity shall be periodically reviewed."
+    },
+    {
+      "code": "1-10-1",
+      "subdomain": "1-10",
+      "parent": null,
+      "textAr": "يجب تطوير واعتماد برنامج للتوعية بالأمن السيبراني في الجهة من خلال قنوات متعددة دورياً، وذلك لتعزيز الوعي بالأمن السيبراني وتهديداته ومخاطره، وبناء ثقافة إيجابية للأمن السيبراني.",
+      "textEn": "A cybersecurity awareness program, delivered through multiple channels, shall be periodically developed and approved by the entity to strengthen the awareness about cybersecurity, cyber threats, and risks, and to build a positive cybersecurity awareness culture."
+    },
+    {
+      "code": "1-10-2",
+      "subdomain": "1-10",
+      "parent": null,
+      "textAr": "يجب تطبيق البرنامج المعتمد للتوعية بالأمن السيبراني في الجهة.",
+      "textEn": "The approved cybersecurity awareness program shall be implemented within the entity."
+    },
+    {
+      "code": "1-10-3",
+      "subdomain": "1-10",
+      "parent": null,
+      "textAr": "يجب أن يغطي برنامج التوعية بالأمن السيبراني كيفية حماية الجهة من أهم المخاطر والتهديدات السيبرانية وما يستجد منها، بما في ذلك:",
+      "textEn": "The cybersecurity awareness program shall include how to protect the entity against the most important and latest cyber risks and threats, including:"
+    },
+    {
+      "code": "1-10-3-1",
+      "subdomain": "1-10",
+      "parent": "1-10-3",
+      "textAr": "التعامل الآمن مع خدمات البريد الإلكتروني خصوصاً مع رسائل التصيد الإلكتروني.",
+      "textEn": "Secure handling of email services, especially phishing emails."
+    },
+    {
+      "code": "1-10-3-2",
+      "subdomain": "1-10",
+      "parent": "1-10-3",
+      "textAr": "التعامل الآمن مع الأجهزة المحمولة ووسائط التخزين.",
+      "textEn": "Secure handling of mobile devices and storage media."
+    },
+    {
+      "code": "1-10-3-3",
+      "subdomain": "1-10",
+      "parent": "1-10-3",
+      "textAr": "التعامل الآمن مع خدمات تصفح الإنترنت.",
+      "textEn": "Secure Internet browsing."
+    },
+    {
+      "code": "1-10-3-4",
+      "subdomain": "1-10",
+      "parent": "1-10-3",
+      "textAr": "التعامل الآمن مع وسائل التواصل الاجتماعي.",
+      "textEn": "Secure usage of social media."
+    },
+    {
+      "code": "1-10-4",
+      "subdomain": "1-10",
+      "parent": null,
+      "textAr": "يجب توفير المهارات المتخصصة والتدريب اللازم للعاملين في المجالات الوظيفية ذات العلاقة المباشرة بالأمن السيبراني في الجهة، وتصنيفها بما يتماشى مع مسؤولياتهم الوظيفية فيما يتعلق بالأمن السيبراني، بما في ذلك:",
+      "textEn": "Specialized skills and necessary training shall be provided to personnel in positions that are linked directly to cybersecurity within the entity. Such skills and training shall be classified in line with their cybersecurity responsibilities, including:"
+    },
+    {
+      "code": "1-10-4-1",
+      "subdomain": "1-10",
+      "parent": "1-10-4",
+      "textAr": "موظفو الإدارة المعنية بالأمن السيبراني.",
+      "textEn": "Cybersecurity department personnel."
+    },
+    {
+      "code": "1-10-4-2",
+      "subdomain": "1-10",
+      "parent": "1-10-4",
+      "textAr": "الموظفون العاملون في تطوير البرامج والتطبيقات والموظفون المشغلون للأصول المعلوماتية والتقنية للجهة.",
+      "textEn": "Personnel working on software/application development and those working on information and technology assets of the entity."
+    },
+    {
+      "code": "1-10-4-3",
+      "subdomain": "1-10",
+      "parent": "1-10-4",
+      "textAr": "الوظائف الإشرافية والتنفيذية.",
+      "textEn": "Executive and supervisory positions."
+    },
+    {
+      "code": "1-10-5",
+      "subdomain": "1-10",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق برنامج التوعية بالأمن السيبراني في الجهة دورياً.",
+      "textEn": "The implementation of cybersecurity awareness program within the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-1-1",
+      "subdomain": "2-1",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لإدارة الأصول المعلوماتية والتقنية للجهة.",
+      "textEn": "Cybersecurity requirements for managing information and technology assets of the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-1-2",
+      "subdomain": "2-1",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لإدارة الأصول المعلوماتية والتقنية للجهة.",
+      "textEn": "Cybersecurity requirements for managing information and technology assets of the entity shall be implemented."
+    },
+    {
+      "code": "2-1-3",
+      "subdomain": "2-1",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد ونشر سياسة الاستخدام المقبول للأصول المعلوماتية والتقنية للجهة.",
+      "textEn": "The policy of acceptable use of information and technology assets of the entity shall be identified, documented, approved, and communicated."
+    },
+    {
+      "code": "2-1-4",
+      "subdomain": "2-1",
+      "parent": null,
+      "textAr": "يجب تطبيق سياسة الاستخدام المقبول للأصول المعلوماتية والتقنية للجهة.",
+      "textEn": "The policy of acceptable use of information and technology assets of the entity shall be implemented."
+    },
+    {
+      "code": "2-1-5",
+      "subdomain": "2-1",
+      "parent": null,
+      "textAr": "يجب تصنيف الأصول المعلوماتية والتقنية للجهة وترميزها (Labeling) والتعامل معها وفقاً للمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "textEn": "Information and technology assets of the entity shall be classified, labeled, and handled as per the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "2-1-6",
+      "subdomain": "2-1",
+      "parent": null,
+      "textAr": "يجب مراجعة متطلبات الأمن السيبراني لإدارة الأصول المعلوماتية والتقنية للجهة دورياً.",
+      "textEn": "Cybersecurity requirements for managing information and technology assets of the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-2-1",
+      "subdomain": "2-2",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لإدارة هويات الدخول والصلاحيات في الجهة.",
+      "textEn": "Cybersecurity requirements for identity and access management of the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-2-2",
+      "subdomain": "2-2",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لإدارة هويات الدخول والصلاحيات في الجهة.",
+      "textEn": "Cybersecurity requirements for identity and access management of the entity shall be implemented."
+    },
+    {
+      "code": "2-2-3",
+      "subdomain": "2-2",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني المتعلقة بإدارة هويات الدخول والصلاحيات في الجهة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for identity and access management of the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "2-2-3-1",
+      "subdomain": "2-2",
+      "parent": "2-2-3",
+      "textAr": "التحقق من الهوية أحادي العنصر (Single-factor authentication) بناءً على إدارة تسجيل المستخدم، وإدارة كلمة المرور.",
+      "textEn": "Single-factor authentication based on username and password."
+    },
+    {
+      "code": "2-2-3-2",
+      "subdomain": "2-2",
+      "parent": "2-2-3",
+      "textAr": "التحقق من الهوية متعدد العناصر (Multi-Factor Authentication) وتحديد عناصر التحقق المناسبة وعددها وكذلك تقنيات التحقق المناسبة بناء على نتائج تقييم الأثر المحتمل لفشل عملية التحقق وتخطيها، وذلك لعمليات الدخول عن بعد والحسابات ذات الصلاحيات الهامة والحساسة.",
+      "textEn": "Multi-factor authentication, and defining the suitable authentication factors and their numbers as well as the suitable authentication techniques based on the result of impact assessment of authentication failure and bypass for remote access and for privileged accounts."
+    },
+    {
+      "code": "2-2-3-3",
+      "subdomain": "2-2",
+      "parent": "2-2-3",
+      "textAr": "إدارة تصاريح وصلاحيات المستخدمين (Authorization) بناءً على مبادئ التحكم بالدخول والصلاحيات (مبدأ الحاجة إلى المعرفة والاستخدام \"Need-to-know and Need-to-use\"، ومبدأ الحد الأدنى من الصلاحيات والامتيازات \"Least Privilege\"، ومبدأ فصل المهام \"Segregation of Duties\").",
+      "textEn": "User authorization based on identity and access control principles (Need-to-Know and Need-to-Use principle, Least Privilege principle, and Segregation of Duties principle)."
+    },
+    {
+      "code": "2-2-3-4",
+      "subdomain": "2-2",
+      "parent": "2-2-3",
+      "textAr": "إدارة الصلاحيات الهامة والحساسة (Privileged Access Management).",
+      "textEn": "Privileged access management."
+    },
+    {
+      "code": "2-2-3-5",
+      "subdomain": "2-2",
+      "parent": "2-2-3",
+      "textAr": "المراجعة الدورية لهويات الدخول والصلاحيات.",
+      "textEn": "Periodic review of identities and access rights."
+    },
+    {
+      "code": "2-2-4",
+      "subdomain": "2-2",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات الأمن السيبراني لإدارة هويات الدخول والصلاحيات في الجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for identity and access management of the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-3-1",
+      "subdomain": "2-3",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لحماية الأنظمة وأجهزة معالجة المعلومات للجهة.",
+      "textEn": "Cybersecurity requirements for protection of information system and processing facilities of the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-3-2",
+      "subdomain": "2-3",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لحماية الأنظمة وأجهزة معالجة المعلومات للجهة.",
+      "textEn": "Cybersecurity requirements for protection of information systems and processing facilities of the entity shall be implemented."
+    },
+    {
+      "code": "2-3-3",
+      "subdomain": "2-3",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لحماية الأنظمة وأجهزة معالجة المعلومات للجهة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for protection of information systems and processing facilities of the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "2-3-3-1",
+      "subdomain": "2-3",
+      "parent": "2-3-3",
+      "textAr": "الحماية من الفيروسات والبرامج والأنشطة المشبوهة والبرمجيات الضارة (Malware) على أجهزة المستخدمين والخوادم باستخدام تقنيات وآليات الحماية الحديثة والمتقدمة، وإدارتها بشكل آمن.",
+      "textEn": "Protection from viruses, suspicious programs and activities, and malware on workstations and servers, using modern and advanced protection technologies and mechanisms, and securely managing them."
+    },
+    {
+      "code": "2-3-3-2",
+      "subdomain": "2-3",
+      "parent": "2-3-3",
+      "textAr": "التقييد الحازم لاستخدام أجهزة وسائط التخزين الخارجية والأمن المتعلق بها.",
+      "textEn": "Strict restriction on the use of external storage media and their security."
+    },
+    {
+      "code": "2-3-3-3",
+      "subdomain": "2-3",
+      "parent": "2-3-3",
+      "textAr": "إدارة حزم التحديثات والإصلاحات للأنظمة والتطبيقات والأجهزة (Patch Management).",
+      "textEn": "Patch management for systems, applications, and devices."
+    },
+    {
+      "code": "2-3-3-4",
+      "subdomain": "2-3",
+      "parent": "2-3-3",
+      "textAr": "مزامنة التوقيت (Clock Synchronization) مركزياً ومن مصدر دقيق وموثوق، ومن هذه المصادر ما توفره الهيئة السعودية للمواصفات والمقاييس والجودة.",
+      "textEn": "Centralized clock synchronization with an accurate and trusted source, such as sources provided by the Saudi Standards, Metrology and Quality Organization (SASO)."
+    },
+    {
+      "code": "2-3-4",
+      "subdomain": "2-3",
+      "parent": null,
+      "textAr": "يجب مراجعة متطلبات الأمن السيبراني لحماية الأنظمة وأجهزة معالجة المعلومات للجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for protection of the information system and processing facilities of the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-4-1",
+      "subdomain": "2-4",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لحماية البريد الإلكتروني للجهة.",
+      "textEn": "Cybersecurity requirements for protection of the email service of the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-4-2",
+      "subdomain": "2-4",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لحماية البريد الإلكتروني للجهة.",
+      "textEn": "Cybersecurity requirements for protection of email service of the entity shall be implemented."
+    },
+    {
+      "code": "2-4-3",
+      "subdomain": "2-4",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لحماية البريد الإلكتروني للجهة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for protection of the email service of the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "2-4-3-1",
+      "subdomain": "2-4",
+      "parent": "2-4-3",
+      "textAr": "تحليل وتصفية (Filtering) رسائل البريد الإلكتروني (وخصوصاً رسائل التصيّد الإلكتروني \"Phishing Emails\" والرسائل الإقتحامية \"Spam Emails\") باستخدام تقنيات وآليات الحماية الحديثة والمتقدمة للبريد الإلكتروني.",
+      "textEn": "Analyzing and filtering email messages (specifically phishing emails and spam emails) using modern and advanced email protection techniques and mechanisms."
+    },
+    {
+      "code": "2-4-3-2",
+      "subdomain": "2-4",
+      "parent": "2-4-3",
+      "textAr": "التحقق من الهوية متعدد العناصر (Multi-Factor Authentication) وتحديد عناصر التحقق المناسبة وعددها وكذلك تقنيات التحقق المناسبة بناء على نتائج تقييم الأثر المحتمل لفشل عملية التحقق وتخطيها، وذلك للدخول عن بعد والدخول عن طريق صفحة موقع البريد الإلكتروني (Webmail).",
+      "textEn": "Multi-factor authentication, and defining the suitable authentication factors and their numbers as well as the suitable authentication techniques based on the result of impact assessment of authentication failure and bypass for remote and webmail access."
+    },
+    {
+      "code": "2-4-3-3",
+      "subdomain": "2-4",
+      "parent": "2-4-3",
+      "textAr": "النسخ الاحتياطي والأرشفة للبريد الإلكتروني.",
+      "textEn": "Email archiving and backup."
+    },
+    {
+      "code": "2-4-3-4",
+      "subdomain": "2-4",
+      "parent": "2-4-3",
+      "textAr": "الحماية من التهديدات المتقدمة المستمرة (APT Protection)، التي تستخدم عادة الفيروسات والبرمجيات الضارة غير المعروفة مسبقاً (Zero-Day Malware)، وإدارتها بشكل آمن.",
+      "textEn": "Secure management and protection against Advanced Persistent Threats (APT), which normally utilize zero-day malware and viruses."
+    },
+    {
+      "code": "2-4-3-5",
+      "subdomain": "2-4",
+      "parent": "2-4-3",
+      "textAr": "توثيق مجال البريد الإلكتروني للجهة باستخدام إطار سياسة المرسل (Sender Policy Framework \"SPF\") والبريد المعرّف بمفاتيح النطاق (Domain Keys Identified Mail \"DKIM\") وسياسة مصادقة الرسائل والإبلاغ عنها (Domain Message Authentication Reporting and Conformance \"DMARC\").",
+      "textEn": "Validation of the entity’s email service domains by using Sender Policy Framework (SPF), Domain Keys Identified Mail (DKIM), and Domain Message Authentication Reporting and Conformance (DMARC)."
+    },
+    {
+      "code": "2-4-4",
+      "subdomain": "2-4",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات الأمن السيبراني الخاصة بحماية البريد الإلكتروني للجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for email service of the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-5-1",
+      "subdomain": "2-5",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لإدارة أمن شبكات الجهة.",
+      "textEn": "Cybersecurity requirements for the entity’s network security management shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-5-2",
+      "subdomain": "2-5",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لإدارة أمن شبكات الجهة.",
+      "textEn": "Cybersecurity requirements for the entity’s network security management shall be implemented."
+    },
+    {
+      "code": "2-5-3",
+      "subdomain": "2-5",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لإدارة أمن شبكات الجهة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for the entity’s network security management shall include the following as a minimum:"
+    },
+    {
+      "code": "2-5-3-1",
+      "subdomain": "2-5",
+      "parent": "2-5-3",
+      "textAr": "العزل والتقسيم المادي أو المنطقي لأجزاء الشبكات بشكل آمن، واللازم للسيطرة على مخاطر الأمن السيبراني ذات العلاقة، باستخدام جدار الحماية (Firewall) ومبدأ الدفاع الأمني متعدد المراحل (Defense-in-Depth).",
+      "textEn": "Logical or physical isolation and segmentation of network segments in a secure manner which is required to control relevant cybersecurity risks, using firewall and defense-in-depth principle."
+    },
+    {
+      "code": "2-5-3-2",
+      "subdomain": "2-5",
+      "parent": "2-5-3",
+      "textAr": "عزل شبكة بيئة الإنتاج عن شبكات بيئات التطوير والاختبار.",
+      "textEn": "Isolation of production network from testing and development environment networks."
+    },
+    {
+      "code": "2-5-3-3",
+      "subdomain": "2-5",
+      "parent": "2-5-3",
+      "textAr": "أمن التصفح والاتصال بالإنترنت، ويشمل ذلك التقييد الحازم للمواقع الإلكترونية المشبوهة، ومواقع مشاركة وتخزين الملفات، ومواقع الدخول عن بعد.",
+      "textEn": "Secure browsing and internet connectivity, including strict restrictions on suspicious websites, file storage/sharing websites, and remote access websites."
+    },
+    {
+      "code": "2-5-3-4",
+      "subdomain": "2-5",
+      "parent": "2-5-3",
+      "textAr": "أمن الشبكات اللاسلكية وحمايتها باستخدام وسائل آمنة للتحقق من الهوية والتشفير، وعدم ربط الشبكات اللاسلكية بشبكة الجهة الداخلية إلا بناءً على دراسة متكاملة للمخاطر المترتبة على ذلك والتعامل معها بما يضمن حماية الأصول التقنية للجهة.",
+      "textEn": "Wireless network security and protection using secure authentication and encryption techniques and avoiding the connection of wireless networks to the entity’s internal network, except after a comprehensive assessment of subsequent risks, with handling them in a way that protects the technology assets of the entity."
+    },
+    {
+      "code": "2-5-3-5",
+      "subdomain": "2-5",
+      "parent": "2-5-3",
+      "textAr": "قيود وإدارة منافذ وبروتوكولات وخدمات الشبكة.",
+      "textEn": "Restricting and managing network services, protocols, and ports."
+    },
+    {
+      "code": "2-5-3-6",
+      "subdomain": "2-5",
+      "parent": "2-5-3",
+      "textAr": "أنظمة الحماية المتقدمة لاكتشاف ومنع الاختراقات (Intrusion Prevention Systems).",
+      "textEn": "Intrusion Prevention Systems (IPS)."
+    },
+    {
+      "code": "2-5-3-7",
+      "subdomain": "2-5",
+      "parent": "2-5-3",
+      "textAr": "أمن نظام أسماء النطاقات (DNS).",
+      "textEn": "Security of Domain Name Service (DNS)."
+    },
+    {
+      "code": "2-5-3-8",
+      "subdomain": "2-5",
+      "parent": "2-5-3",
+      "textAr": "حماية قناة تصفح الإنترنت من التهديدات المتقدمة المستمرة (APT Protection)، التي تستخدم عادة الفيروسات والبرمجيات الضارة غير المعروفة مسبقاً (Zero-Day Malware)، وإدارتها بشكل آمن.",
+      "textEn": "Secure management and protection of Internet browsing channel against Advanced Persistent Threats (APT), which normally utilize zero-day malware and viruses."
+    },
+    {
+      "code": "2-5-3-9",
+      "subdomain": "2-5",
+      "parent": "2-5-3",
+      "textAr": "الحماية من هجمات تعطيل الشبكات (Distributed Denial of Service Attack \"DDoS\") للحد من المخاطر السيبرانية الناتجة عن هجمات تعطيل الشبكات.",
+      "textEn": "Protecting against Distributed Denial of Service (DDoS) attacks to limit risks arising from these attacks."
+    },
+    {
+      "code": "2-5-4",
+      "subdomain": "2-5",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات الأمن السيبراني لإدارة أمن شبكات الجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for the entity’s network security management shall be periodically reviewed."
+    },
+    {
+      "code": "2-6-1",
+      "subdomain": "2-6",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني الخاصة بأمن الأجهزة المحمولة والأجهزة الشخصية للعاملين (BYOD) عند ارتباطها بشبكة الجهة.",
+      "textEn": "Cybersecurity requirements for mobile devices and BYOD security when connected to the entity’s network shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-6-2",
+      "subdomain": "2-6",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني الخاصة بأمن الأجهزة المحمولة وأجهزة (BYOD) للجهة.",
+      "textEn": "Cybersecurity requirements for mobile devices and BYOD security of the entity shall be implemented."
+    },
+    {
+      "code": "2-6-3",
+      "subdomain": "2-6",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني الخاصة بأمن الأجهزة المحمولة وأجهزة (BYOD) للجهة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for mobile devices and BYOD security of the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "2-6-3-1",
+      "subdomain": "2-6",
+      "parent": "2-6-3",
+      "textAr": "فصل وتشفير البيانات والمعلومات (الخاصة بالجهة) المخزنة على الأجهزة المحمولة وأجهزة (BYOD).",
+      "textEn": "Separation and encryption of the entity’s data and information stored on mobile devices and BYODs."
+    },
+    {
+      "code": "2-6-3-2",
+      "subdomain": "2-6",
+      "parent": "2-6-3",
+      "textAr": "الاستخدام المحدد والمقيد بناءً على ما تتطلبه مصلحة أعمال الجهة.",
+      "textEn": "Controlled and restricted use based on the requirements of the interest of the entity's business."
+    },
+    {
+      "code": "2-6-3-3",
+      "subdomain": "2-6",
+      "parent": "2-6-3",
+      "textAr": "حذف البيانات والمعلومات (الخاصة بالجهة) المخزنة على الأجهزة المحمولة وأجهزة (BYOD) عند فقدان الأجهزة أو بعد انتهاء/إنهاء العلاقة الوظيفية مع الجهة.",
+      "textEn": "Deletion of the entity’s data and information stored on mobile devices and BYOD in cases of device loss or after the ending/termination of employment with the entity."
+    },
+    {
+      "code": "2-6-3-4",
+      "subdomain": "2-6",
+      "parent": "2-6-3",
+      "textAr": "التوعية الأمنية للمستخدمين.",
+      "textEn": "Security awareness for users."
+    },
+    {
+      "code": "2-6-4",
+      "subdomain": "2-6",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات الأمن السيبراني الخاصة لأمن الأجهزة المحمولة وأجهزة (BYOD) للجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for mobile devices and BYOD security of the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-7-1",
+      "subdomain": "2-7",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لحماية بيانات ومعلومات الجهة، والتعامل معها وفقاً للمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "textEn": "Cybersecurity requirements for protecting and handling data and information of the entity shall be identified, documented, and approved, as per the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "2-7-2",
+      "subdomain": "2-7",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لحماية بيانات ومعلومات الجهة، حسب مستوى تصنيفها.",
+      "textEn": "Cybersecurity requirements for protecting data and information of the entity shall be implemented, based on its classification level."
+    },
+    {
+      "code": "2-7-3",
+      "subdomain": "2-7",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات الأمن السيبراني لحماية بيانات ومعلومات الجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for protecting data and information of the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-8-1",
+      "subdomain": "2-8",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني للتشفير في الجهة.",
+      "textEn": "Cybersecurity requirements for cryptography within the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-8-2",
+      "subdomain": "2-8",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني للتشفير في الجهة.",
+      "textEn": "Cybersecurity requirements for cryptography within the entity shall be implemented."
+    },
+    {
+      "code": "2-8-3",
+      "subdomain": "2-8",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني للتشفير بحد أدنى المتطلبات المذكورة في المعايير الوطنية للتشفير الصادرة من الهيئة، مع تطبيق مستوى التشفير المناسب، وذلك بحسب طبيعة ومستوى حساسية البيانات والأنظمة والشبكات وبناءً على تقييم المخاطر من قبل الجهة وحسب المتطلبات التشريعية والتنظيمية ذات العلاقة، وفقاً لما يلي:",
+      "textEn": "Cybersecurity requirements for cryptography shall include at least the requirements in the National Cryptographic Standards, published by NCA. The appropriate cryptographic standard level shall be implemented based on the nature and sensitivity of the data, systems, and networks to be protected as well as the entity’s risk assessment, and as per the relevant legislative and regulatory requirements, as follows:"
+    },
+    {
+      "code": "2-8-3-1",
+      "subdomain": "2-8",
+      "parent": "2-8-3",
+      "textAr": "معايير أنظمة وحلول التشفير المعتمدة والقيود المطبقة عليها (تقنياً وتنظيمياً).",
+      "textEn": "Approved cryptographic systems and solutions standards and their technical and regulatory restrictions."
+    },
+    {
+      "code": "2-8-3-2",
+      "subdomain": "2-8",
+      "parent": "2-8-3",
+      "textAr": "الإدارة الآمنة لمفاتيح التشفير خلال عمليات دورة حياتها.",
+      "textEn": "Secure management of cryptographic keys during their lifecycles."
+    },
+    {
+      "code": "2-8-3-3",
+      "subdomain": "2-8",
+      "parent": "2-8-3",
+      "textAr": "تشفير البيانات أثناء النقل والتخزين والمعالجة بناءً على تصنيفها وحسب المتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "textEn": "Encryption of data in-transit and at-rest, as per their classification and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "2-8-4",
+      "subdomain": "2-8",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات الأمن السيبراني للتشفير في الجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for cryptography within the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-9-1",
+      "subdomain": "2-9",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لإدارة النسخ الاحتياطية للجهة.",
+      "textEn": "Cybersecurity requirements for backup and recovery management within the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-9-2",
+      "subdomain": "2-9",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لإدارة النسخ الاحتياطية للجهة.",
+      "textEn": "Cybersecurity requirements for backup and recovery management within the entity shall be implemented."
+    },
+    {
+      "code": "2-9-3",
+      "subdomain": "2-9",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لإدارة النسخ الاحتياطية بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for backup and recovery management shall include the following as a minimum:"
+    },
+    {
+      "code": "2-9-3-1",
+      "subdomain": "2-9",
+      "parent": "2-9-3",
+      "textAr": "نطاق النسخ الاحتياطية وشموليتها للأصول المعلوماتية والتقنية الحساسة.",
+      "textEn": "Scope of backups to cover critical technology and information assets."
+    },
+    {
+      "code": "2-9-3-2",
+      "subdomain": "2-9",
+      "parent": "2-9-3",
+      "textAr": "القدرة السريعة على استعادة البيانات والأنظمة بعد التعرض لحوادث الأمن السيبراني.",
+      "textEn": "Ability to perform quick recovery of data and systems after cybersecurity incidents."
+    },
+    {
+      "code": "2-9-3-3",
+      "subdomain": "2-9",
+      "parent": "2-9-3",
+      "textAr": "إجراء فحص دوري لمدى فعالية استعادة النسخ الاحتياطية.",
+      "textEn": "Periodic testing for the effectiveness of backup recovery."
+    },
+    {
+      "code": "2-9-4",
+      "subdomain": "2-9",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات الأمن السيبراني لإدارة النسخ الاحتياطية للجهة.",
+      "textEn": "The implementation of cybersecurity requirements for backup and recovery management within the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-10-1",
+      "subdomain": "2-10",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لإدارة الثغرات التقنية للجهة.",
+      "textEn": "Cybersecurity requirements for technical vulnerabilities management within the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-10-2",
+      "subdomain": "2-10",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لإدارة الثغرات التقنية للجهة.",
+      "textEn": "Cybersecurity requirements for technical vulnerabilities management within the entity shall be implemented."
+    },
+    {
+      "code": "2-10-3",
+      "subdomain": "2-10",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لإدارة الثغرات بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for technical vulnerabilities management shall include the following as a minimum:"
+    },
+    {
+      "code": "2-10-3-1",
+      "subdomain": "2-10",
+      "parent": "2-10-3",
+      "textAr": "فحص واكتشاف الثغرات دورياً.",
+      "textEn": "Periodic vulnerabilities assessment and detection."
+    },
+    {
+      "code": "2-10-3-2",
+      "subdomain": "2-10",
+      "parent": "2-10-3",
+      "textAr": "تصنيف الثغرات حسب خطورتها.",
+      "textEn": "Vulnerabilities classification based on their severities."
+    },
+    {
+      "code": "2-10-3-3",
+      "subdomain": "2-10",
+      "parent": "2-10-3",
+      "textAr": "معالجة الثغرات بناءً على تصنيفها والمخاطر السيبرانية المترتبة عليها.",
+      "textEn": "Vulnerabilities remediation based on their classification and the associated cyber risks."
+    },
+    {
+      "code": "2-10-3-4",
+      "subdomain": "2-10",
+      "parent": "2-10-3",
+      "textAr": "إدارة حزم التحديثات والإصلاحات الأمنية لمعالجة الثغرات، على أن يتم التحقق من سلامة وفعالية تلك التحديثات والإصلاحات الأمنية على بيئة غير بيئة الإنتاج قبل تطبيقها.",
+      "textEn": "Patch management to remediate vulnerabilities, and ensuring the integrity and effectiveness of these updates and fixes are verified using a non-production environment before being applied."
+    },
+    {
+      "code": "2-10-3-5",
+      "subdomain": "2-10",
+      "parent": "2-10-3",
+      "textAr": "التواصل والاشتراك مع مصادر موثوقة فيما يتعلق بالتنبيهات المتعلقة بالثغرات الجديدة والمحدثة.",
+      "textEn": "Communication and subscription with trusted resources for new and up-to-date vulnerabilities."
+    },
+    {
+      "code": "2-10-4",
+      "subdomain": "2-10",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات الأمن السيبراني لإدارة الثغرات التقنية للجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for technical vulnerabilities management within the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-11-1",
+      "subdomain": "2-11",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لعمليات اختبار الاختراق في الجهة.",
+      "textEn": "Cybersecurity requirements for penetration testing within the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-11-2",
+      "subdomain": "2-11",
+      "parent": null,
+      "textAr": "يجب تنفيذ عمليات اختبار الاختراق في الجهة.",
+      "textEn": "Cybersecurity requirements for penetration testing within the entity shall be implemented."
+    },
+    {
+      "code": "2-11-3",
+      "subdomain": "2-11",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لاختبار الاختراق بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for penetration testing shall include the following as a minimum:"
+    },
+    {
+      "code": "2-11-3-1",
+      "subdomain": "2-11",
+      "parent": "2-11-3",
+      "textAr": "نطاق عمل اختبار الاختراق، ليشمل جميع الخدمات المقدمة خارجياً (عن طريق الإنترنت) ومكوناتها التقنية، ومنها: البنية التحتية، المواقع الإلكترونية، تطبيقات الويب، تطبيقات الهواتف الذكية واللوحية، البريد الإلكتروني والدخول عن بعد.",
+      "textEn": "Scope of penetration testing to include all externally provided services (via the Internet) and their technical components, including infrastructure, websites, web applications, smartphone and tablet applications, email, and remote access."
+    },
+    {
+      "code": "2-11-3-2",
+      "subdomain": "2-11",
+      "parent": "2-11-3",
+      "textAr": "عمل اختبار الاختراق دورياً.",
+      "textEn": "Conducting penetration tests periodically."
+    },
+    {
+      "code": "2-11-4",
+      "subdomain": "2-11",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات الأمن السيبراني لعمليات اختبار الاختراق في الجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for penetration testing shall be periodically reviewed."
+    },
+    {
+      "code": "2-12-1",
+      "subdomain": "2-12",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات إدارة سجلات الأحداث ومراقبة الأمن السيبراني للجهة.",
+      "textEn": "Cybersecurity requirements for cybersecurity event logs and monitoring management within the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-12-2",
+      "subdomain": "2-12",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات إدارة سجلات الأحداث ومراقبة الأمن السيبراني للجهة.",
+      "textEn": "Cybersecurity requirements for cybersecurity event logs and monitoring management within the entity shall be implemented."
+    },
+    {
+      "code": "2-12-3",
+      "subdomain": "2-12",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات إدارة سجلات الأحداث ومراقبة الأمن السيبراني بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for cybersecurity event logs and monitoring management shall include the following as a minimum:"
+    },
+    {
+      "code": "2-12-3-1",
+      "subdomain": "2-12",
+      "parent": "2-12-3",
+      "textAr": "تفعيل سجلات الأحداث (Event logs) الخاصة بالأمن السيبراني على الأصول المعلوماتية الحساسة لدى الجهة.",
+      "textEn": "Activation of cybersecurity event logs for critical information assets within the entity."
+    },
+    {
+      "code": "2-12-3-2",
+      "subdomain": "2-12",
+      "parent": "2-12-3",
+      "textAr": "تفعيل سجلات الأحداث الخاصة بالحسابات ذات الصلاحيات الهامة والحساسة على الأصول المعلوماتية وأحداث عمليات الدخول عن بعد لدى الجهة.",
+      "textEn": "Activation of cybersecurity event logs for critical and privileged accounts accessing information assets as well as for remote access events within the entity."
+    },
+    {
+      "code": "2-12-3-3",
+      "subdomain": "2-12",
+      "parent": "2-12-3",
+      "textAr": "تحديد التقنيات اللازمة (SIEM) لجمع سجلات الأحداث الخاصة بالأمن السيبراني.",
+      "textEn": "Identification of Security Information and Event Management (SIEM) techniques required for cybersecurity event logs collection."
+    },
+    {
+      "code": "2-12-3-4",
+      "subdomain": "2-12",
+      "parent": "2-12-3",
+      "textAr": "المراقبة المستمرة لسجلات الأحداث الخاصة بالأمن السيبراني.",
+      "textEn": "Continuous monitoring of cybersecurity event logs."
+    },
+    {
+      "code": "2-12-3-5",
+      "subdomain": "2-12",
+      "parent": "2-12-3",
+      "textAr": "مدة الاحتفاظ بسجلات الأحداث الخاصة بالأمن السيبراني (على ألا تقل عن 12 شهر).",
+      "textEn": "Retention period of cybersecurity event logs (shall be at least 12 months)."
+    },
+    {
+      "code": "2-12-4",
+      "subdomain": "2-12",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات إدارة سجلات الأحداث ومراقبة الأمن السيبراني في الجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for cybersecurity event logs and monitoring management within the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-13-1",
+      "subdomain": "2-13",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات إدارة حوادث وتهديدات الأمن السيبراني في الجهة.",
+      "textEn": "Requirements for cybersecurity incident and threat management within the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-13-2",
+      "subdomain": "2-13",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات إدارة حوادث وتهديدات الأمن السيبراني في الجهة.",
+      "textEn": "Requirements for cybersecurity incident and threat management within the entity shall be implemented."
+    },
+    {
+      "code": "2-13-3",
+      "subdomain": "2-13",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات إدارة حوادث وتهديدات الأمن السيبراني بحد أدنى ما يلي:",
+      "textEn": "Requirements for cybersecurity incident and threat management shall include the following as a minimum:"
+    },
+    {
+      "code": "2-13-3-1",
+      "subdomain": "2-13",
+      "parent": "2-13-3",
+      "textAr": "وضع خطط الاستجابة للحوادث الأمنية وآليات التصعيد.",
+      "textEn": "Cybersecurity incident response plans and escalation procedures."
+    },
+    {
+      "code": "2-13-3-2",
+      "subdomain": "2-13",
+      "parent": "2-13-3",
+      "textAr": "تصنيف حوادث الأمن السيبراني.",
+      "textEn": "Cybersecurity incident classification."
+    },
+    {
+      "code": "2-13-3-3",
+      "subdomain": "2-13",
+      "parent": "2-13-3",
+      "textAr": "تبليغ الهيئة عند حدوث حادثة أمن سيبراني.",
+      "textEn": "Reporting cybersecurity incidents to the NCA."
+    },
+    {
+      "code": "2-13-3-4",
+      "subdomain": "2-13",
+      "parent": "2-13-3",
+      "textAr": "مشاركة التنبيهات والمعلومات الاستباقية ومؤشرات الاختراق وتقارير حوادث الأمن السيبراني مع الهيئة.",
+      "textEn": "Sharing cybersecurity incident notifications, threat intelligence, penetration indicators, and incident reports with the NCA."
+    },
+    {
+      "code": "2-13-3-5",
+      "subdomain": "2-13",
+      "parent": "2-13-3",
+      "textAr": "الحصول على المعلومات الاستباقية (Threat Intelligence) والتعامل معها.",
+      "textEn": "Collecting and handling threat intelligence feeds."
+    },
+    {
+      "code": "2-13-4",
+      "subdomain": "2-13",
+      "parent": null,
+      "textAr": "يجب مراجعة تطبيق متطلبات إدارة حوادث وتهديدات الأمن السيبراني في الجهة دورياً.",
+      "textEn": "The implementation of cybersecurity requirements for incident and threat management within the entity shall be periodically reviewed."
+    },
+    {
+      "code": "2-14-1",
+      "subdomain": "2-14",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لحماية الأصول المعلوماتية والتقنية للجهة من الوصول المادي غير المصرح به والفقدان والسرقة والتخريب.",
+      "textEn": "Cybersecurity requirements for protection of information and technology assets of the entity against unauthorized physical access, loss, theft, and damage shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-14-2",
+      "subdomain": "2-14",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لحماية الأصول المعلوماتية والتقنية للجهة من الوصول المادي غير المصرح به والفقدان والسرقة والتخريب.",
+      "textEn": "Cybersecurity requirements for protection of information and technology assets of the entity against unauthorized physical access, loss, theft, and damage shall be implemented."
+    },
+    {
+      "code": "2-14-3",
+      "subdomain": "2-14",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لحماية الأصول المعلوماتية والتقنية للجهة من الوصول المادي غير المصرح به والفقدان والسرقة والتخريب بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for protection of information and technology assets of the entity against unauthorized physical access, loss, theft, and damage shall include the following as a minimum:"
+    },
+    {
+      "code": "2-14-3-1",
+      "subdomain": "2-14",
+      "parent": "2-14-3",
+      "textAr": "الدخول المصرح به للأماكن الحساسة في الجهة (مثل: مركز بيانات الجهة، مركز التعافي من الكوارث، أماكن معالجة المعلومات الحساسة، مركز المراقبة الأمنية، غرف اتصالات الشبكة، مناطق الإمداد الخاصة بالأجهزة والعتاد التقنية، وغيرها).",
+      "textEn": "Authorized access to critical areas within the entity (e.g. the entity’s data center, disaster recovery center, critical information processing facilities, security surveillance center, network connection rooms, technical device and equipment supply areas, etc.)."
+    },
+    {
+      "code": "2-14-3-2",
+      "subdomain": "2-14",
+      "parent": "2-14-3",
+      "textAr": "سجلات الدخول والمراقبة (CCTV).",
+      "textEn": "Access and monitoring logs (CCTV)."
+    },
+    {
+      "code": "2-14-3-3",
+      "subdomain": "2-14",
+      "parent": "2-14-3",
+      "textAr": "حماية معلومات سجلات الدخول والمراقبة.",
+      "textEn": "Protection of access and monitoring log information."
+    },
+    {
+      "code": "2-14-3-4",
+      "subdomain": "2-14",
+      "parent": "2-14-3",
+      "textAr": "أمن إتلاف وإعادة استخدام الأصول المادية التي تحوي معلومات مصنفة (وتشمل: الوثائق الورقية ووسائط الحفظ والتخزين).",
+      "textEn": "Security of the destruction and re-use of physical assets that hold classified information (including paper documents and storage media)."
+    },
+    {
+      "code": "2-14-3-5",
+      "subdomain": "2-14",
+      "parent": "2-14-3",
+      "textAr": "أمن الأجهزة والمعدات داخل مباني الجهة وخارجها.",
+      "textEn": "Security of devices and equipment inside and outside the entity’s facilities."
+    },
+    {
+      "code": "2-14-4",
+      "subdomain": "2-14",
+      "parent": null,
+      "textAr": "يجب مراجعة متطلبات الأمن السيبراني لحماية الأصول المعلوماتية والتقنية للجهة من الوصول المادي غير المصرح به والفقدان والسرقة والتخريب دورياً.",
+      "textEn": "Cybersecurity requirements for protection of information and technology assets of the entity against unauthorized physical access, loss, theft, and damage shall be periodically reviewed."
+    },
+    {
+      "code": "2-15-1",
+      "subdomain": "2-15",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني لحماية تطبيقات الويب الخارجية للجهة من المخاطر السيبرانية.",
+      "textEn": "Cybersecurity requirements for protection of external web applications of the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "2-15-2",
+      "subdomain": "2-15",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني لحماية تطبيقات الويب الخارجية للجهة.",
+      "textEn": "Cybersecurity requirements for protection of external web applications of the entity shall be implemented."
+    },
+    {
+      "code": "2-15-3",
+      "subdomain": "2-15",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني لحماية تطبيقات الويب الخارجية للجهة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for protection of external web applications of the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "2-15-3-1",
+      "subdomain": "2-15",
+      "parent": "2-15-3",
+      "textAr": "استخدام جدار الحماية لتطبيقات الويب (Web Application Firewall).",
+      "textEn": "Use of web application firewall."
+    },
+    {
+      "code": "2-15-3-2",
+      "subdomain": "2-15",
+      "parent": "2-15-3",
+      "textAr": "استخدام مبدأ المعمارية متعددة المستويات (Multi-tier Architecture).",
+      "textEn": "Adoption of the multi-tier architecture principle."
+    },
+    {
+      "code": "2-15-3-3",
+      "subdomain": "2-15",
+      "parent": "2-15-3",
+      "textAr": "استخدام بروتوكولات آمنة (مثل بروتوكول HTTPS).",
+      "textEn": "Use of secure protocols (e.g. HTTPS)."
+    },
+    {
+      "code": "2-15-3-4",
+      "subdomain": "2-15",
+      "parent": "2-15-3",
+      "textAr": "توضيح سياسة الاستخدام الآمن للمستخدمين.",
+      "textEn": "Clarification of the secure usage policy for users."
+    },
+    {
+      "code": "2-15-3-5",
+      "subdomain": "2-15",
+      "parent": "2-15-3",
+      "textAr": "التحقق من الهوية على أن يتم تحديد عناصر التحقق المناسبة وعددها وكذلك تقنيات التحقق المناسبة بناء على نتائج تقييم الأثر المحتمل لفشل عملية التحقق وتخطيها، وذلك لعمليات دخول المستخدمين.",
+      "textEn": "User authentication, and the suitable authentication factors and their numbers as well as the authentication techniques shall be defined based on the result of impact assessment of authentication failure and bypass for users’ access."
+    },
+    {
+      "code": "2-15-4",
+      "subdomain": "2-15",
+      "parent": null,
+      "textAr": "يجب مراجعة متطلبات الأمن السيبراني لحماية تطبيقات الويب للجهة من المخاطر السيبرانية دورياً.",
+      "textEn": "Cybersecurity requirements for protection of web applications of the entity shall be periodically reviewed."
+    },
+    {
+      "code": "3-1-1",
+      "subdomain": "3-1",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني ضمن إدارة استمرارية أعمال الجهة.",
+      "textEn": "Cybersecurity requirements for business continuity management within the entity shall be identified, documented, and approved."
+    },
+    {
+      "code": "3-1-2",
+      "subdomain": "3-1",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني ضمن إدارة استمرارية أعمال الجهة.",
+      "textEn": "Cybersecurity requirements for business continuity management within the entity shall be implemented."
+    },
+    {
+      "code": "3-1-3",
+      "subdomain": "3-1",
+      "parent": null,
+      "textAr": "يجب أن تغطي إدارة استمرارية الأعمال في الجهة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for business continuity management within the entity shall include the following as a minimum:"
+    },
+    {
+      "code": "3-1-3-1",
+      "subdomain": "3-1",
+      "parent": "3-1-3",
+      "textAr": "التأكد من استمرارية الأنظمة والإجراءات المتعلقة بالأمن السيبراني.",
+      "textEn": "Ensuring the continuity of cybersecurity systems and procedures."
+    },
+    {
+      "code": "3-1-3-2",
+      "subdomain": "3-1",
+      "parent": "3-1-3",
+      "textAr": "وضع خطط الاستجابة لحوادث الأمن السيبراني التي قد تؤثر على استمرارية أعمال الجهة.",
+      "textEn": "Developing plans for response to cybersecurity incidents that may affect the entity’s business continuity."
+    },
+    {
+      "code": "3-1-3-3",
+      "subdomain": "3-1",
+      "parent": "3-1-3",
+      "textAr": "وضع خطط التعافي من الكوارث (Disaster Recovery Plan).",
+      "textEn": "Developing disaster recovery plans."
+    },
+    {
+      "code": "3-1-4",
+      "subdomain": "3-1",
+      "parent": null,
+      "textAr": "يجب مراجعة متطلبات الأمن السيبراني ضمن إدارة استمرارية أعمال الجهة دورياً.",
+      "textEn": "Cybersecurity requirements for business continuity management within the entity shall be periodically reviewed."
+    },
+    {
+      "code": "4-1-1",
+      "subdomain": "4-1",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني ضمن العقود والاتفاقيات مع الأطراف الخارجية للجهة.",
+      "textEn": "Cybersecurity requirements for the entity’s contracts and agreements with third parties shall be identified, documented, and approved."
+    },
+    {
+      "code": "4-1-2",
+      "subdomain": "4-1",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني ضمن العقود والاتفاقيات (مثل اتفاقية مستوى الخدمة SLA) مع الأطراف الخارجية التي قد تتأثر بإصابتها بيانات الجهة أو الخدمات المقدمة لها بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for contracts and agreements with third parties, e.g. Service Level Agreement (SLA), which, if impaired, may affect the entity's data or services shall include the following as a minimum:"
+    },
+    {
+      "code": "4-1-2-1",
+      "subdomain": "4-1",
+      "parent": "4-1-2",
+      "textAr": "بنود المحافظة على سرية المعلومات (Non-Disclosure Clauses) والحذف الآمن من قبَل الطرف الخارجي لبيانات الجهة عند انتهاء الخدمة.",
+      "textEn": "Clauses of non-disclosure and the secure removal of the entity’s data by the third party upon the end of service."
+    },
+    {
+      "code": "4-1-2-2",
+      "subdomain": "4-1",
+      "parent": "4-1-2",
+      "textAr": "إجراءات التواصل في حال حدوث حادثة أمن سيبراني.",
+      "textEn": "Communication procedures in case of the occurrence of a cybersecurity incident."
+    },
+    {
+      "code": "4-1-2-3",
+      "subdomain": "4-1",
+      "parent": "4-1-2",
+      "textAr": "إلزام الطرف الخارجي بتطبيق متطلبات وسياسات الأمن السيبراني للجهة والمتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "textEn": "Obligating the third party to apply the entity’s cybersecurity requirements and policies and the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "4-1-3",
+      "subdomain": "4-1",
+      "parent": null,
+      "textAr": "يجب أن تغطي متطلبات الأمن السيبراني مع الأطراف الخارجية التي تقدم خدمات الإسناد للأمن السيبراني أو لتقنية المعلومات، أو الخدمات المدارة بحد أدنى ما يلي:",
+      "textEn": "Cybersecurity requirements for contracts and agreements with third parties providing IT or cybersecurity outsourcing or managed services shall include the following as a minimum:"
+    },
+    {
+      "code": "4-1-3-1",
+      "subdomain": "4-1",
+      "parent": "4-1-3",
+      "textAr": "إجراء تقييم لمخاطر الأمن السيبراني، والتأكد من وجود ما يضمن السيطرة على تلك المخاطر، قبل توقيع العقود والاتفاقيات أو عند تغيير المتطلبات التشريعية والتنظيمية ذات العلاقة.",
+      "textEn": "Conducting a cybersecurity risk assessment and ensuring the availability of risk mitigation controls before signing contracts and agreements or upon making changes to the relevant legislative and regulatory requirements."
+    },
+    {
+      "code": "4-1-3-2",
+      "subdomain": "4-1",
+      "parent": "4-1-3",
+      "textAr": "أن تكون مراكز عمليات خدمات الأمن السيبراني المدارة للتشغيل والمراقبة، والتي تستخدم طريقة الوصول عن بعد، موجودة بالكامل داخل المملكة.",
+      "textEn": "Cybersecurity managed service centers for monitoring and operations which use remote access shall be fully located in the Kingdom of Saudi Arabia."
+    },
+    {
+      "code": "4-1-4",
+      "subdomain": "4-1",
+      "parent": null,
+      "textAr": "يجب مراجعة متطلبات الأمن السيبراني مع الأطراف الخارجية دورياً.",
+      "textEn": "Cybersecurity requirements for third parties shall be periodically reviewed."
+    },
+    {
+      "code": "4-2-1",
+      "subdomain": "4-2",
+      "parent": null,
+      "textAr": "يجب تحديد وتوثيق واعتماد متطلبات الأمن السيبراني الخاصة باستخدام خدمات الحوسبة السحابية والاستضافة.",
+      "textEn": "Cybersecurity requirements for use of cloud computing and hosting services shall be identified, documented, and approved."
+    },
+    {
+      "code": "4-2-2",
+      "subdomain": "4-2",
+      "parent": null,
+      "textAr": "يجب تطبيق متطلبات الأمن السيبراني الخاصة بخدمات الحوسبة السحابية والاستضافة للجهة.",
+      "textEn": "Cybersecurity requirements for the cloud computing and hosting services within the entity shall be implemented."
+    },
+    {
+      "code": "4-2-3",
+      "subdomain": "4-2",
+      "parent": null,
+      "textAr": "بما يتوافق مع المتطلبات التشريعية والتنظيمية ذات العلاقة، وبالإضافة إلى ما ينطبق من الضوابط ضمن المكونات الرئيسية رقم (1) و (2) و (3) والمكون الفرعي رقم (4-1) الضرورية لحماية بيانات الجهة أو الخدمات المقدمة لها، يجب أن تغطي متطلبات الأمن السيبراني الخاصة باستخدام خدمات الحوسبة السحابية والاستضافة بحد أدنى ما يلي:",
+      "textEn": "In accordance with the relevant legislative and regulatory requirements, and in addition to the applicable controls in the Main Domains (1), (2), and (3) and Subdomain (4.1) that are necessary to protect the entity’s data or services provided thereto, cybersecurity requirements for use of cloud computing and hosting services shall include the following as a minimum:"
+    },
+    {
+      "code": "4-2-3-1",
+      "subdomain": "4-2",
+      "parent": "4-2-3",
+      "textAr": "حماية بيانات الجهة من قبل مقدمي خدمات الحوسبة السحابية والاستضافة بما يتوافق مع مستوى تصنيفها، وإعادتها للجهة (بصيغة قابلة للاستخدام) عند انتهاء الخدمة.",
+      "textEn": "Protection of entity’s data by cloud and hosting service providers in accordance with its classification level and returning data (in a usable format) upon service completion."
+    },
+    {
+      "code": "4-2-3-2",
+      "subdomain": "4-2",
+      "parent": "4-2-3",
+      "textAr": "فصل البيئة الخاصة بالجهة (وخصوصاً الخوادم الافتراضية) عن غيرها من البيئات التابعة لجهات أخرى في خدمات الحوسبة السحابية.",
+      "textEn": "Separation of the entity’s environment (especially virtual servers) from environments of other entities within the cloud computing service provider."
+    },
+    {
+      "code": "4-2-4",
+      "subdomain": "4-2",
+      "parent": null,
+      "textAr": "يجب مراجعة متطلبات الأمن السيبراني الخاصة بخدمات الحوسبة السحابية والاستضافة دورياً.",
+      "textEn": "Cybersecurity requirements for cloud computing and hosting services shall be periodically reviewed."
+    }
+  ],
+  "sourceEn": {
+    "title": "Essential Cybersecurity Controls (ECC-2:2024)",
+    "url": "https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf",
+    "sha256": "146505199e5374d99302fc3d7e1fdc73b6e2f3292fefd535d5dd891294a81db1"
+  }
+}

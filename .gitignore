@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Builds
+.next/
+dist/
+/api/src/generated/
+
+# Environment
+.env
+.env*.local
+
+# Local data
+/api/storage/
+reference/
+
+# OS
+.DS_Store

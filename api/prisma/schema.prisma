@@ -1,0 +1,290 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "esm"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// A government entity. Every tenant-owned row carries its entityId, and
+/// row-level security only returns rows whose entityId matches the
+/// `app.entity_id` setting of the current transaction.
+model Entity {
+  id        String   @id @default(uuid()) @db.Uuid
+  name      String
+  /// Official English name, shown in the English interface; falls back to name.
+  nameEn    String?  @map("name_en")
+  /// Uses (or plans to use) cloud computing or hosting services. ECC-2:2024
+  /// subdomain 4-2 applies only then. Null until an Admin answers.
+  usesCloud Boolean? @map("uses_cloud")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  users       User[]
+  controls    ControlStatus[]
+  evidence    Evidence[]
+  tasks       RemediationTask[]
+  visits      AuditVisit[]
+  invitations Invitation[]
+  auditLog    AuditLog[]
+
+  @@map("entities")
+}
+
+enum Role {
+  ADMIN
+  CONTROL_OWNER
+  EXECUTIVE
+  AUDITOR
+
+  @@map("role")
+}
+
+enum UserStatus {
+  ACTIVE
+  DISABLED
+
+  @@map("user_status")
+}
+
+model User {
+  id           String     @id @default(uuid()) @db.Uuid
+  entityId     String     @map("entity_id") @db.Uuid
+  /// Unique across the platform: sign-in happens before the entity is known.
+  email        String     @unique
+  name         String
+  role         Role
+  status       UserStatus @default(ACTIVE)
+  passwordHash String?    @map("password_hash")
+  /// TOTP secret, AES-256-GCM encrypted with MFA_ENCRYPTION_KEY.
+  mfaSecret    String?    @map("mfa_secret")
+  mfaEnabled   Boolean    @default(false) @map("mfa_enabled")
+  /// Last TOTP time step accepted, so a code cannot be replayed.
+  mfaLastStep  Int?       @map("mfa_last_step")
+  failedLogins Int        @default(0) @map("failed_logins")
+  lockedUntil  DateTime?  @map("locked_until")
+  createdAt    DateTime   @default(now()) @map("created_at")
+
+  entity        Entity            @relation(fields: [entityId], references: [id], onDelete: Restrict)
+  sessions      Session[]
+  ownedControls ControlStatus[]
+  evidence      Evidence[]        @relation("EvidenceUploader")
+  tasks         RemediationTask[] @relation("TaskOwner")
+
+  /// Lets tenant rows reference a user together with its entity, so a row can
+  /// never point at a user from another entity.
+  @@unique([id, entityId])
+  @@index([entityId])
+  @@map("users")
+}
+
+/// A signed-in browser. The cookie holds a random token; only its SHA-256
+/// hash is stored, so a database leak does not leak live sessions.
+model Session {
+  id          String    @id @default(uuid()) @db.Uuid
+  tokenHash   String    @unique @map("token_hash")
+  userId      String    @map("user_id") @db.Uuid
+  entityId    String    @map("entity_id") @db.Uuid
+  mfaVerified Boolean   @default(false) @map("mfa_verified")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  lastSeenAt  DateTime  @default(now()) @map("last_seen_at")
+  expiresAt   DateTime  @map("expires_at")
+  revokedAt   DateTime? @map("revoked_at")
+  ip          String?
+  userAgent   String?   @map("user_agent")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([entityId])
+  @@index([userId])
+  @@map("sessions")
+}
+
+/// An Admin invites a person by email; the link carries a random token whose
+/// hash is stored here. There is no open sign-up.
+model Invitation {
+  id          String    @id @default(uuid()) @db.Uuid
+  tokenHash   String    @unique @map("token_hash")
+  entityId    String    @map("entity_id") @db.Uuid
+  email       String
+  role        Role
+  invitedById String?   @map("invited_by_id") @db.Uuid
+  expiresAt   DateTime  @map("expires_at")
+  acceptedAt  DateTime? @map("accepted_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  entity Entity @relation(fields: [entityId], references: [id], onDelete: Restrict)
+
+  @@index([entityId])
+  @@map("invitations")
+}
+
+/// Append-only. The database rejects UPDATE and DELETE, even from the owner.
+model AuditLog {
+  id        BigInt   @id @default(autoincrement())
+  entityId  String   @map("entity_id") @db.Uuid
+  actorId   String?  @map("actor_id") @db.Uuid
+  action    String
+  target    String?
+  meta      Json?
+  ip        String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  entity Entity @relation(fields: [entityId], references: [id], onDelete: Restrict)
+
+  @@index([entityId, createdAt])
+  @@map("audit_log")
+}
+
+enum ComplianceStatus {
+  COMPLIANT
+  PARTIAL
+  NON_COMPLIANT
+  NOT_APPLICABLE
+  NOT_STARTED
+
+  @@map("compliance_status")
+}
+
+/// The entity's current status for one ECC-2:2024 main control, e.g. "2-9-3".
+/// A control with no row is NOT_STARTED and unassigned.
+model ControlStatus {
+  id          String           @id @default(uuid()) @db.Uuid
+  entityId    String           @map("entity_id") @db.Uuid
+  controlCode String           @map("control_code")
+  status      ComplianceStatus @default(NOT_STARTED)
+  ownerId     String?          @map("owner_id") @db.Uuid
+  dueDate     DateTime?        @map("due_date") @db.Date
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+
+  entity  Entity     @relation(fields: [entityId], references: [id], onDelete: Restrict)
+  control EccControl @relation(fields: [controlCode], references: [code], onDelete: Restrict)
+  owner   User?      @relation(fields: [ownerId, entityId], references: [id, entityId], onDelete: Restrict)
+
+  @@unique([entityId, controlCode])
+  @@index([entityId])
+  @@map("control_statuses")
+}
+
+// ---------------------------------------------------------------------------
+// ECC-2:2024 catalog. Global reference data, the same for every entity, loaded
+// by a migration from prisma/catalog/ecc-2-2024.json. The API can only read it.
+// ---------------------------------------------------------------------------
+
+model EccDomain {
+  code   String @id
+  nameAr String @map("name_ar")
+  nameEn String @map("name_en")
+  sort   Int
+
+  subdomains EccSubdomain[]
+
+  @@map("ecc_domains")
+}
+
+model EccSubdomain {
+  code        String  @id
+  domainCode  String  @map("domain_code")
+  nameAr      String  @map("name_ar")
+  nameEn      String  @map("name_en")
+  objectiveAr String  @map("objective_ar")
+  objectiveEn String? @map("objective_en")
+  sort        Int
+
+  domain   EccDomain    @relation(fields: [domainCode], references: [code], onDelete: Restrict)
+  controls EccControl[]
+
+  @@index([domainCode])
+  @@map("ecc_subdomains")
+}
+
+/// A main control ("2-9-3") or a subcontrol ("2-9-3-1", with parentCode set).
+model EccControl {
+  code          String  @id
+  subdomainCode String  @map("subdomain_code")
+  parentCode    String? @map("parent_code")
+  textAr        String  @map("text_ar")
+  textEn        String? @map("text_en")
+  sort          Int
+
+  subdomain EccSubdomain      @relation(fields: [subdomainCode], references: [code], onDelete: Restrict)
+  parent    EccControl?       @relation("Subcontrols", fields: [parentCode], references: [code], onDelete: Restrict)
+  children  EccControl[]      @relation("Subcontrols")
+  statuses  ControlStatus[]
+  evidence  Evidence[]
+  tasks     RemediationTask[]
+
+  @@index([subdomainCode])
+  @@index([parentCode])
+  @@map("ecc_controls")
+}
+
+/// A file that proves a control is met. The bytes live in evidence storage
+/// (local disk for now) under storageKey; the database keeps the metadata and a
+/// SHA-256 so a file can be checked later. Removing evidence only sets
+/// removedAt, so the history stays auditable.
+model Evidence {
+  id           String    @id @default(uuid()) @db.Uuid
+  entityId     String    @map("entity_id") @db.Uuid
+  controlCode  String    @map("control_code")
+  title        String
+  fileName     String    @map("file_name")
+  mimeType     String    @map("mime_type")
+  size         Int
+  sha256       String
+  storageKey   String    @unique @map("storage_key")
+  /// Optional: when the document stops being valid (a certificate, a signed policy).
+  expiresOn    DateTime? @map("expires_on") @db.Date
+  uploadedById String    @map("uploaded_by_id") @db.Uuid
+  createdAt    DateTime  @default(now()) @map("created_at")
+  removedAt    DateTime? @map("removed_at")
+  removedById  String?   @map("removed_by_id") @db.Uuid
+
+  entity     Entity     @relation(fields: [entityId], references: [id], onDelete: Restrict)
+  control    EccControl @relation(fields: [controlCode], references: [code], onDelete: Restrict)
+  uploadedBy User       @relation("EvidenceUploader", fields: [uploadedById, entityId], references: [id, entityId], onDelete: Restrict)
+
+  @@index([entityId, controlCode])
+  @@map("evidence")
+}
+
+/// One step of a control's remediation plan: what to do, who does it, by when.
+/// Removing a step only sets removedAt, so the plan's history stays auditable.
+model RemediationTask {
+  id          String    @id @default(uuid()) @db.Uuid
+  entityId    String    @map("entity_id") @db.Uuid
+  controlCode String    @map("control_code")
+  title       String
+  ownerId     String?   @map("owner_id") @db.Uuid
+  dueDate     DateTime? @map("due_date") @db.Date
+  doneAt      DateTime? @map("done_at")
+  createdById String    @map("created_by_id") @db.Uuid
+  createdAt   DateTime  @default(now()) @map("created_at")
+  removedAt   DateTime? @map("removed_at")
+
+  entity  Entity     @relation(fields: [entityId], references: [id], onDelete: Restrict)
+  control EccControl @relation(fields: [controlCode], references: [code], onDelete: Restrict)
+  owner   User?      @relation("TaskOwner", fields: [ownerId, entityId], references: [id, entityId], onDelete: Restrict)
+
+  @@index([entityId, controlCode])
+  @@map("remediation_tasks")
+}
+
+/// A scheduled visit by the auditor. The nearest upcoming one drives the rail
+/// card and an alert; past ones stay as history. Cancelling only sets
+/// cancelledAt, so the history keeps every change.
+model AuditVisit {
+  id          String    @id @default(uuid()) @db.Uuid
+  entityId    String    @map("entity_id") @db.Uuid
+  visitDate   DateTime  @map("visit_date") @db.Date
+  notes       String?
+  createdById String    @map("created_by_id") @db.Uuid
+  createdAt   DateTime  @default(now()) @map("created_at")
+  cancelledAt DateTime? @map("cancelled_at")
+
+  entity Entity @relation(fields: [entityId], references: [id], onDelete: Restrict)
+
+  @@index([entityId, visitDate])
+  @@map("audit_visits")
+}

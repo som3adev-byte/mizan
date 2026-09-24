@@ -1,0 +1,84 @@
+# Runs on every pull request and on main: the API against a real PostgreSQL
+# with the same roles as docker-compose (so row-level security is really
+# tested), and the web app's type check, lint and production build.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: mizan_owner
+          POSTGRES_PASSWORD: ci-owner-password
+          POSTGRES_DB: mizan
+        ports: ['5433:5432']
+        options: >-
+          --health-cmd "pg_isready -U mizan_owner -d mizan"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      # CI-only throwaway credentials for the service container above.
+      DATABASE_URL: postgresql://mizan_app:ci-app-password@localhost:5433/mizan
+      MIGRATE_DATABASE_URL: postgresql://mizan_owner:ci-owner-password@localhost:5433/mizan
+      TEST_DATABASE_URL: postgresql://mizan_app:ci-app-password@localhost:5433/mizan_test
+      TEST_MIGRATE_DATABASE_URL: postgresql://mizan_owner:ci-owner-password@localhost:5433/mizan_test
+      WEB_ORIGIN: http://localhost:3000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: api/package-lock.json
+
+      - name: Create database roles (same script as docker-compose)
+        working-directory: .
+        env:
+          PGHOST: localhost
+          PGPORT: '5433'
+          PGPASSWORD: ci-owner-password
+          POSTGRES_USER: mizan_owner
+          POSTGRES_DB: mizan
+          APP_DB_PASSWORD: ci-app-password
+        run: sh db/init/01-roles.sh
+
+      - name: Generate a throwaway MFA encryption key
+        run: echo "MFA_ENCRYPTION_KEY=$(openssl rand -base64 32)" >> "$GITHUB_ENV"
+      - run: npm ci
+      - run: npx prisma generate
+      - run: npx tsc --noEmit
+      - run: npm run lint
+      - run: npm test
+      - name: e2e (tenant isolation, auth, controls, evidence, tasks, alerts, audit log)
+        run: npm run test:e2e
+
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npx eslint src
+      # The build also generates the route types that tsc checks against.
+      - run: npm run build
+      - run: npx tsc --noEmit

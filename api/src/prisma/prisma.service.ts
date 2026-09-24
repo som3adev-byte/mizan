@@ -13,7 +13,14 @@ export class PrismaService extends PrismaClient implements OnModuleDestroy {
   constructor() {
     const connectionString = process.env.DATABASE_URL;
     if (!connectionString) throw new Error('DATABASE_URL is not set');
-    super({ adapter: new PrismaPg({ connectionString }) });
+    super({
+      adapter: new PrismaPg({ connectionString }),
+      // Every tenant query runs in a transaction (see entity-scope). A serverless
+      // database (e.g. Neon) can scale its compute to zero when idle, so the first
+      // request after a pause waits for a cold start. The default 2s maxWait is too
+      // tight for that; allow the wake-up before giving up.
+      transactionOptions: { maxWait: 15_000, timeout: 20_000 },
+    });
   }
 
   forEntity(entityId: string) {

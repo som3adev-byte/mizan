@@ -16,3 +16,8 @@ reference/
 
 # OS
 .DS_Store
+
+# demo credentials (contain MFA secrets)
+api/demo-credentials.json
+api/demo-users.json
+api/.env.neon

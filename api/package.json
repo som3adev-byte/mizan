@@ -23,7 +23,8 @@
     "prisma:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "test:isolation": "vitest run --config ./vitest.config.e2e.ts test/tenant-isolation.e2e-spec.ts",
-    "create-entity": "nest build && node dist/cli/create-entity.js"
+    "create-entity": "nest build && node dist/cli/create-entity.js",
+    "seed:demo": "node scripts/seed-demo.mjs"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",

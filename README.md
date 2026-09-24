@@ -8,6 +8,24 @@ A government entity's cybersecurity manager opens one dashboard and, in seconds,
 
 ---
 
+## At a glance
+
+| | |
+|---|---|
+| **200** ECC controls & subcontrols | **103** automated tests, all green |
+| **PostgreSQL Row-Level Security** tenant isolation | **9** screens · Arabic + English · light + dark |
+| Mandatory **two-step (TOTP)** auth | **GitHub Actions** CI on every change |
+
+---
+
+## The problem
+
+Every Saudi government entity must comply with 108 mandatory cybersecurity controls and prove it to an auditor. In practice the status lives in spreadsheets: gaps go unnoticed, evidence quietly expires, and no one can answer *"where do we stand?"* on demand.
+
+Mizan's guiding principle is that **the platform speaks up on its own** — overdue controls, gaps and expiring evidence surface to the right person instead of waiting to be filtered out of a table. A manager opens one dashboard and, in seconds, reads the score, the weakest domain, and the next thing to do.
+
+---
+
 ## What it does
 
 - **The full ECC-2:2024 catalog** — 4 domains, 28 subdomains, 108 main controls and 92 subcontrols, transcribed verbatim from the official Arabic PDF and matched to the official English text.
